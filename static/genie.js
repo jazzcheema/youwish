@@ -3,11 +3,14 @@
 const WISH_API_ENDPOINT = '/wish';
 const SEND_FAVORITE = '/favorite_video';
 const $box = $('#box');
+const $box2 = $('#box2');
+const $box3 = $('#box3');
+
 window.addEventListener('scroll', moveGenie, { passive: true });
 
 
 /**
- * Event for moving splash page image--> follows mouse.
+ * Event for moving splash page Genie full body image--> follows mouse.
  */
 function moveGenie(evt) {
   const x = evt.clientX / window.innerWidth - 0.5;
@@ -22,6 +25,44 @@ function moveGenie(evt) {
 //Event for moving splash image.
 $(document).on('mousemove', moveGenie);
 
+
+/**
+ * Event for moving Login page Genie Head image--> follows mouse.
+ */
+function moveGenie2(evt) {
+  const x = evt.clientX / window.innerWidth - 0.5;
+  const y = 0.5 - evt.clientY / window.innerHeight;
+
+  const rotationX = y * 60;
+  const rotationY = x * 60;
+
+  $box2.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
+
+};
+//Event for moving login image.
+$(document).on('mousemove', moveGenie2);
+
+
+
+/**
+ * Event for moving Login page Genie Head image--> follows mouse.
+ */
+function moveLamp(evt) {
+  const x = evt.clientX / window.innerWidth - 0.5;
+  const y = 0.5 - evt.clientY / window.innerHeight;
+
+  const rotationX = -y * 100;
+  const rotationY = -x * 100;
+
+  $box3.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
+
+};
+//Event for moving login image.
+$(document).on('mousemove', moveLamp);
+
+
+
+
 /////////////////////////////////////////////////////////////////////////SOUNDS
 //Play music for homepage.
 function playHomePageSound() {
@@ -30,6 +71,8 @@ function playHomePageSound() {
     homePageSound.play();
   }
 }
+
+
 
 //Home Page Sound Ok
 function homepageOk() {
@@ -44,6 +87,16 @@ function homepageOk() {
 $("#login-button-on-splash").on('click', homepageOk);
 
 
+//Genie Face Sound
+
+function thwompSound() {
+  const genieYellSound = document.getElementById('thwompSnd');
+  if (genieYellSound) {
+    genieYellSound.play();
+  }
+}
+
+$('#box2').on('click', thwompSound);
 
 //Login Page Sound Ok
 function loginSound() {
@@ -146,7 +199,7 @@ $('#edit-user-button').on('click', editProfileSound);
 window.addEventListener('load', function () {
   const genieSnd = document.getElementById('geniePageSnd');
   if (genieSnd) {
-    genie.play();
+    genieSnd.play();
   }
 });
 
