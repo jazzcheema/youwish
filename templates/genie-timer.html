@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+
+{% block content%}
+<!-- genie page -->
+{% if get_flashed_messages() %}
+{% for message in get_flashed_messages() %}
+<h4 class="flash-password">{{ message }}</h4>
+{% endfor %}
+{% endif %}
+
+
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light" id="nav-bar">
+    <a class="navbar-brand" href="/edit"> <img src="{{g.user.image_url}}" alt="Navbar Icon" class="profile-photo-nav"
+            id="profile-photo">{{g.user.username}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <form>
+                <button formaction="/" id="nav-bar-home" class="btn btn-secondary"><img
+                        src="/static/images/magic-lamp.png" alt="home-icon">Home</button>
+                <button formaction="/wish" formmethod="GET" class="btn btn-light" id="nav-bar-wish">Wish
+                </button>
+                <button formaction="/favorite/{{g.user.id}}" id="nav-bar-favorites"
+                    class="btn btn-light">Favorites</button>
+                <button class="btn btn-light" disabled>Locked</a>
+            </form>
+        </div>
+        <div class="navbar-nav">
+            <form action="/logout" method="POST">
+                <button class="btn btn-warning" id="nav-bar-logout">Logout</button>
+                {{ g.csrf_form.hidden_tag() }}
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="nav-space"></div>
+
+
+{% if get_flashed_messages() %}
+{% for message in get_flashed_messages() %}
+<h4 class="flash-password">{{ message }}</h4>
+{% endfor %}
+{% endif %}
+
+
+{% for favorite in user.favorites%}
+<div> <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ favorite.video_id }}" frameborder="0"
+        allowfullscreen></iframe>
+    <form method="POST" action="/favorite_video/{{favorite.video_id}}">
+        {{ g.csrf_form.hidden_tag() }}
+        <button class="btn btn-outline-primary btn-sm" id="unfavorite-button">
+            Unfavorite
+        </button>
+    </form>
+</div>
+{% endfor %}
+
+{% endblock %}

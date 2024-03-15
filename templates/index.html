@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genie</title>
+  <link rel="icon" type="image/x-icon" href="/static/images/magic-lamp.png">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://unpkg.com/bootstrap"></script>
+
+</head>
+
+<body>
+
+
+  {% block content %}
+  {% if get_flashed_messages() %}
+  {% for message in get_flashed_messages() %}
+  <h4 class="flash-password">{{ message }}</h4>
+  {% endfor %}
+  {% endif %}
+  <div class="container">
+    <div class="box" id="box">
+      <div class="homepage-buttons">
+        <form>
+          <button formaction="/signup" formmethod="GET" class="btn btn-success"
+            id="signup-button-on-splash">Signup</button>
+        </form>
+        <form>
+          <button formaction="/login" formmethod="GET" class="btn btn-info" id="login-button-on-splash">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+  <footer class="text-center">
+    </section>
+    </div>
+    <div class="text-center p-3">
+      © 2024 Copyright
+      <a class="text-dark" href="/">YouWish.com</a><img src="/static/images/magic-lamp.png" alt="">
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/jquery"></script>
+  <script src="/static/genie.js"></script>
+</body>
+
+</html>

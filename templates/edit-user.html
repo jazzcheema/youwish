@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="profile-image-on-edit-page">
+  <img src="{{g.user.image_url}}" alt="profile-image">
+  <p>Current profile image</p>
+</div>
+<div class="edit-profile-form">
+  <div class="row justify-content-md-center">
+    <div class="col-md-4">
+      <h2 class="join-message">Edit Your Profile</h2>
+      <form method="POST" id="user_form">
+        {{ g.csrf_form.hidden_tag() }}
+
+        {% for field in form if
+        field.widget.input_type != 'hidden' and
+        field.name != 'password'%}
+        {% for error in field.errors %}
+        <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+        {{ field(placeholder=field.label.text, class="form-control") }}
+        {% endfor %}
+        <br>
+        <p>To confirm changes, enter your password:</p>
+
+        {% if form.password.errors %}
+        {% for error in form.password.errors %}
+        <span class="text-danger">
+          {{ error }}
+        </span>
+        {% endfor %}
+        {% endif %}
+
+        {{ form.password(
+        placeholder="Enter your password to confirm",
+        class="form-control") }}
+        <br>
+        <div class="edit-btn-area">
+          <button class="btn btn-success" id="edit-user-button">Edit user</button>
+          {{ form.hidden_tag() }}
+          <a href="/wish" class="btn btn-outline-secondary" id="cancel-user-button">Cancel</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center">
+  </section>
+  </div>
+  <div class="text-center p-3">
+    © 2024 Copyright
+    <a class="text-dark" href="/">YouWish.com</a><img src="/static/images/magic-lamp.png" alt="">
+  </div>
+</footer>
+
+{% endblock %}

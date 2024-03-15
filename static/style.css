@@ -1,0 +1,317 @@
+/* ====================================== Fonts */
+
+@font-face {
+  font-family: myFontStandard;
+  src:url(TT-Norms-Pro-Thin.otf)
+}
+
+@font-face {
+  font-family: myFontTitle;
+  src:url(TT-Norms-Pro-Normal.otf)
+}
+
+/* ====================================== General */
+
+body {
+  background-color: #e5e5e5;
+  font-family: myFontStandard;
+}
+
+.page-title{
+  text-align: center;
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: -15px;
+  width: 100%;
+  background-color:#e5e5e5;
+  text-align: center;
+  padding: 1rem;
+  font-size: 14px;
+}
+
+footer img{
+object-fit: cover;
+height: 100%;
+width: 40px;
+margin-left: 10px;
+}
+
+.nav-space{
+  padding-bottom: 80px;
+}
+
+#nav-bar{
+  z-index: 5;
+  top:0;
+  width: 100%;
+  position: fixed;
+  box-shadow: 0;
+  background-color: rgb(55, 132, 55);
+}
+
+#profile-photo{
+  height: 100%;
+  max-height:100% ;
+  object-fit: cover;
+  width: 40px;
+}
+
+.activate-genie-button{
+  background-color: red;
+  color: white;
+  animation: flash 2s infinite;
+  transition: box-shadow 0.3s;
+}
+
+.activate-genie-button:hover{
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgb(222, 80, 80);
+  color:white;
+  animation: flash 50ms infinite;
+}
+
+.navbar-nav button {
+  margin-right: 20px;
+  padding-left: 100px;
+}
+
+#nav-bar-wish {
+  padding-left: 125px;
+}
+
+
+#profile-photo{
+  margin-left: 10px;
+  padding-right: 10px;
+}
+
+#nav-bar-home{
+  font-family: myFontTitle;
+  padding-left: 10px;
+}
+
+#nav-bar-home img{
+  width: 73px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 50px;
+}
+
+#nav-bar-home:hover{
+  animation: flash 1s infinite;
+}
+
+#nav-bar-wish:hover{
+  animation: flash 1s infinite;
+}
+
+#nav-bar-favorites:hover{
+  animation: flash 1s infinite;
+}
+
+#nav-bar-logout:hover{
+  animation: flash 50ms infinite;
+}
+
+#nav-bar-logout{
+  font-family: myFontTitle;
+  padding-left: 20px;
+}
+
+/* ===================================== Homepage */
+
+.container {
+  perspective: 1000px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  width: 50%;
+  height: 50%;
+  background-image: url('/static/screamhead3.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-out;
+  cursor: pointer;
+  max-width: 100%;
+  margin-bottom: 200px;
+}
+
+.box:hover {
+  transform: rotateY(180deg);
+}
+
+.homepage-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transform: rotateY(0deg);
+  margin-top: 650px;
+}
+
+.homepage-buttons button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+}
+
+#login-button-on-splash:hover{
+  animation: flash 50ms infinite;
+}
+
+#signup-button-on-splash:hover{
+  animation: flash 1s infinite;
+}
+
+
+/* =================================== Signup Page */
+
+.signup-form{
+  margin-top: 100px;
+  padding: 100px;
+  text-align: center;
+}
+
+
+#signup-button{
+  text-align: center;
+  margin-top: 20px;
+}
+
+#signup-button:hover{
+  animation: flash 50ms infinite;
+  cursor: pointer;
+}
+
+
+/* ==================================== Login Page */
+
+.login-form{
+  text-align: center;
+  padding: 100px;
+  margin-top: 100px;
+}
+
+#login-button-page{
+  text-align: center;
+  margin-top: 20px;
+}
+
+#login-button-page:hover{
+  animation: flash 50ms infinite;
+  cursor: pointer;
+}
+
+#forgot-button-page{
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+#forgot-button-page:hover{
+  animation: flash 1s infinite;
+}
+
+/* ==================================== Wish Page */
+
+.video-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+#favorite-button{
+  text-align: center;
+}
+
+
+#lamp-video-display{
+  background: none;
+  border:none;
+}
+
+#lamp-video-display img{
+  width: 300px;
+  height: auto;
+}
+
+/* ==================================== Favorites Page */
+
+#unfavorite-button{
+  background-color: red;
+  color:white;
+  border: none;
+}
+
+
+/* ==================================== Edit Page */
+
+.edit-profile-form{
+ text-align: center;
+  margin-top: 50px;
+}
+
+.profile-image-on-edit-page{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.profile-image-on-edit-page img{
+  width: 20%;
+  height: auto;
+}
+
+#edit-user-button:hover{
+  animation: flash 50ms infinite;
+}
+
+#cancel-user-button:hover{
+  animation: flash 1s infinite;
+}
+
+/* ==================================== Forgot Password */
+
+.flash-password{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+.forgot-password-form{
+  margin-top: 100px;
+  text-align: center;
+  padding: 100px;
+}
+
+#forgot-password-button{
+  text-align: center;
+  margin-top: 20px;
+}
+
+#forgot-password-button:hover{
+  animation: flash 1s infinite;
+}
+
+
+/* ==================================== FX */
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}

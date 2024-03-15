@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+
+
+<div class="reset-password-form">
+  <div class="row justify-content-md-center">
+    <div class="col-md-7 col-lg-5">
+      <h2 class="page-title">Reset Password</h2>
+      <form method="POST" action="/reset/{{token}}" id="user_form">
+        {{ form.hidden_tag() }}
+
+        {% for field in form if field.widget.input_type != 'hidden' %}
+        {% for error in field.errors %}
+        <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+        {{ field(placeholder=field.label.text, class="form-control") }}
+        {% endfor %}
+
+        <button class="btn btn-secondary btn-lg" id="forgot-password-button">Enter</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
