@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from flask import Flask, render_template, request, flash, redirect, session, g, jsonify, url_for
+from flask import Flask, render_template, request, flash, redirect, session, g, jsonify
 from flask_debugtoolbar import DebugToolbarExtension
 from models import db, connect_db, User, Favorite
 from googleapiclient.discovery import build
@@ -315,7 +315,7 @@ def youtube_search():
                         31,32,33,34,35,36,37,38,39,40,41,42,43,44]
         random_video_cat_id = choice(video_cat_ids)
 
-        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API)
+        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_2)
 
         # Call Youtube API and retrieve videos with input from random word
         # and random category. Cannot pull video stats with this call,

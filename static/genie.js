@@ -277,6 +277,10 @@ function callGenie() {
   if (genieReadySnd) {
     genieReadySnd.play();
   }
+  $('#magic-lamp-graphic').attr('src', '/static/images/real_magic_lamp_smoke.png');
+  $('#magic-lamp-graphic').css({
+    'animation': 'flash 2s infinite',
+  });
   $("#nav-bar-locked").text("Visit Genie").removeClass("btn-light");
   $("#nav-bar-locked").addClass("activate-genie-button").prop("disabled", false);
 }
