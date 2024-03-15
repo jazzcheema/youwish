@@ -25,10 +25,23 @@
         <button class="btn btn-primary btn-lg" id="login-button-page">Log in</button>
       </form>
       <form>
-        <button class="btn btn-light btn-lg" id="forgot-button-page" formaction="/forgot" formmethod="GET">Forgot
+        <button class="btn btn-light btn-lg" type="button" id="forgot-button-page" formaction="/forgot"
+          formmethod="GET">Forgot
           Password?</button>
       </form>
     </div>
   </div>
 </div>
+
+
+<audio id="okSoundLogin" preload="auto">
+  <source src="/static/sounds/ok_snd.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+<audio id="forgotPasswordSnd" preload="auto">
+  <source src="/static/sounds/forgot_password_snd.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
 {% endblock %}

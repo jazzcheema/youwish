@@ -25,15 +25,30 @@
     <div class="box" id="box">
       <div class="homepage-buttons">
         <form>
-          <button formaction="/signup" formmethod="GET" class="btn btn-success"
-            id="signup-button-on-splash">Signup</button>
+          <button formaction="/signup" formmethod="GET" class="btn btn-success" id="signup-button-on-splash"
+            type="button">Signup</button>
         </form>
         <form>
-          <button formaction="/login" formmethod="GET" class="btn btn-info" id="login-button-on-splash">Login</button>
+          <button formaction="/login" formmethod="GET" class="btn btn-info" id="login-button-on-splash"
+            type="button">Login</button>
         </form>
       </div>
     </div>
   </div>
+  <audio id="homePageSound" preload="auto">
+    <source src="/static/sounds/splash_page.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="okSoundSplash" preload="auto">
+    <source src="/static/sounds/ok_snd.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="signupSplashSound" preload="auto">
+    <source src="/static/sounds/wild_snd.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
   {% endblock %}
   <footer class="text-center">

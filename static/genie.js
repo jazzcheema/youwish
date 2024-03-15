@@ -5,6 +5,7 @@ const SEND_FAVORITE = '/favorite_video';
 const $box = $('#box');
 window.addEventListener('scroll', moveGenie, { passive: true });
 
+
 /**
  * Event for moving splash page image--> follows mouse.
  */
@@ -16,11 +17,116 @@ function moveGenie(evt) {
   const rotationY = x * 180;
 
   $box.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
+  playHomePageSound();
 };
 //Event for moving splash image.
 $(document).on('mousemove', moveGenie);
 
+/////////////////////////////////////////////////////////////////////////SOUNDS
+//Play music for homepage.
+function playHomePageSound() {
+  const homePageSound = document.getElementById('homePageSound');
+  if (homePageSound) {
+    homePageSound.play();
+  }
+}
 
+//Home Page Sound Ok
+function homepageOk() {
+  const loginHomeSndOk = document.getElementById('okSoundSplash');
+  if (loginHomeSndOk) {
+    setTimeout(() => {
+      window.location.href = '/login';
+    }, 400);
+    loginHomeSndOk.play();
+  }
+}
+$("#login-button-on-splash").on('click', homepageOk);
+
+
+
+//Login Page Sound Ok
+function loginSound() {
+  const loginSndOk = document.getElementById('okSoundLogin');
+  if (loginSndOk) {
+    loginSndOk.play();
+  }
+}
+$("#login-button-page").on('click', loginSound);
+
+
+
+//Forgot Password Sound
+function forgotSound() {
+  const forgotSnd = document.getElementById('forgotPasswordSnd');
+  if (forgotSnd) {
+    setTimeout(() => {
+      window.location.href = '/forgot';
+    }, 200);
+    forgotSnd.play();
+  }
+}
+$("#forgot-button-page").on('click', forgotSound);
+
+
+
+//Forgot Password Send Sound
+function forgotSendSound() {
+  const sendForgotSnd = document.getElementById('forgotPasswordSendSnd');
+  if (sendForgotSnd) {
+    sendForgotSnd.play();
+  }
+}
+$("#forgot-password-button").on('click', forgotSendSound);
+
+
+
+//Signup Homepage Sound
+function signupSndSplash() {
+  const splashSignupSound = document.getElementById('signupSplashSound');
+  if (splashSignupSound) {
+    setTimeout(() => {
+      window.location.href = '/signup';
+    }, 300);
+    splashSignupSound.play();
+  }
+}
+$('#signup-button-on-splash').on('click', signupSndSplash);
+
+
+
+//Signup Page Sound
+function signupSnd() {
+  const signupSndSubmit = document.getElementById('signupPageSnd');
+  if (signupSndSubmit) {
+    signupSndSubmit.play();
+  }
+}
+$('#signup-button').on('click', signupSnd);
+
+
+
+//Magic Lamp Wish Sound
+function magicLampSnd() {
+  const lampWishSnd = document.getElementById('genieLampSnd');
+  if (lampWishSnd) {
+    lampWishSnd.play();
+  }
+}
+$('#magic-lamp-graphic').on('click', magicLampSnd);
+
+
+
+window.addEventListener('load', function() {
+  const genieSnd = document.getElementById('geniePageSnd');
+  if (genieSnd) {
+    genie.play();
+  }
+});
+
+
+
+///////////////////////////////////////////////////////////////////////////////
 /**
  * Creates HTML for each Video display. This is wrapped inside a 'form' with
  * hidden_tag() already rendered on the page.
@@ -88,7 +194,10 @@ function callGenie() {
   setTimeout(() => {
     window.location.href = '/genie';
   }, 15000);
-
+  const genieReadySnd = document.getElementById('genieReady');
+  if (genieReadySnd) {
+    genieReadySnd.play();
+  }
   $("#nav-bar-locked").text("Visit Genie").removeClass("btn-light");
   $("#nav-bar-locked").addClass("activate-genie-button").prop("disabled", false);
 }
@@ -129,3 +238,6 @@ async function favorite(evt) {
 }
 //Event for favoriting video.
 $('.video-container').on('click', '#favorite-button', favorite);
+
+
+
