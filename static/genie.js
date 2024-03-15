@@ -116,8 +116,34 @@ function magicLampSnd() {
 $('#magic-lamp-graphic').on('click', magicLampSnd);
 
 
+//Home Button Nav Sound
+function homeButtonSound() {
+  const homeSnd = document.getElementById('homeButtonSnd');
+  if (homeSnd) {
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 500);
+    homeSnd.play();
+  }
+}
+$('#nav-bar-home').on('click', homeButtonSound);
 
-window.addEventListener('load', function() {
+
+
+//Edit Profile Sound
+function editProfileSound() {
+  const editSnd = document.getElementById('editProfileSnd');
+  if (editSnd) {
+    editSnd.play();
+  }
+}
+$('#edit-user-button').on('click', editProfileSound);
+
+
+
+
+//Genie Page Music
+window.addEventListener('load', function () {
   const genieSnd = document.getElementById('geniePageSnd');
   if (genieSnd) {
     genie.play();
@@ -139,10 +165,10 @@ function generateHtmlMarkup(video) {
         src="https://www.youtube.com/embed/${video.id}?controls=0&showinfo=0&modestbranding=1"
         frameborder="0" allowfullscreen>
         </iframe>
-          <button class="btn btn-outline-primary btn-sm"
+          <button
           id="favorite-button"
           data-id="${video.id}"
-          type="submit">Favorite</button>
+          type="submit"><i class="bi bi-heart"></i></button>
   `);
 }
 
@@ -226,14 +252,14 @@ async function favorite(evt) {
 
   if ($button.hasClass('unfavorite-button')) {
     $button.css({
-      'background-color': 'red',
-      'color': 'white'
-    }).text('Unfavorite');
+      'background-color': '',
+      'color': 'red'
+    }).html('<i class="bi bi-heart-fill"></i>');
   } else {
     $button.css({
       'background-color': '',
-      'color': 'blue'
-    }).text('Favorite');
+      'color': 'gray'
+    }).html('<i class="bi bi-heart"></i>');
   }
 }
 //Event for favoriting video.

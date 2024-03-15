@@ -11,8 +11,8 @@
   <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <form>
-        <button formaction="/" id="nav-bar-home" class="btn btn-secondary"><img src="/static/images/magic-lamp.png"
-            alt="home-icon">Home</button>
+        <button formaction="/" id="nav-bar-home" type="button" class="btn btn-secondary"><img
+            src="/static/images/magic-lamp.png" alt="home-icon">Home</button>
         <button formaction="/wish" formmethod="GET" class="btn btn-light" id="nav-bar-wish">Wish
         </button>
         <button formaction="/favorite/{{g.user.id}}" id="nav-bar-favorites" class="btn btn-light">Favorites</button>
@@ -62,6 +62,12 @@
 
 <audio id="genieReady" preload="auto">
   <source src="/static/sounds/genie_ready.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+<audio id="homeButtonSnd" preload="auto">
+  <source src="/static/sounds/locked_genie.wav" type="audio/mp3">
   Your browser does not support the audio element.
 </audio>
 
