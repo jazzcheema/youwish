@@ -223,6 +223,10 @@ def show_user_favorites(user_id):
         flash("Access unauthorized", "danger")
         return redirect("/")
 
+    if g.user.blocked:
+        flash("You're blocked until midnight...")
+        return redirect('/')
+
     if g.user.id != user_id:
         return redirect(f"/favorite/{g.user.id}")
 
@@ -239,6 +243,10 @@ def edit_user_profile():
     if not g.user:
         flash("Access unauthorized", "danger")
         return redirect("/")
+
+    if g.user.blocked:
+        flash("You're blocked until midnight...")
+        return redirect('/')
 
     form = UserAddForm(obj=g.user)
 
@@ -290,6 +298,9 @@ def youtube_search():
         flash("Access unauthorized", "danger")
         return redirect("/")
 
+    if g.user.blocked:
+        flash("You're blocked until midnight...")
+        return redirect('/')
 
     if  request.method == 'POST':
 
@@ -398,7 +409,12 @@ def show_genie():
         flash('Access blocked')
         return redirect('/')
 
+    if g.user.blocked:
+        flash("You're blocked until midnight...")
+        return redirect('/')
 
+    g.user.blocked = True
+    db.session.commit()
     print('''
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣠⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⡿⢿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀

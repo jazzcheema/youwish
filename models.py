@@ -77,6 +77,17 @@ class User(db.Model):
         nullable=False,
     )
 
+    blocked = db.Column(
+        db.Boolean,
+        nullable=False,
+        default=False,
+    )
+
+    blocked_total = db.Column(
+        db.Integer,
+        default=None,
+    )
+
     favorites = db.relationship('Favorite', backref="user")
 
 
