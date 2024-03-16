@@ -297,7 +297,7 @@ def youtube_search():
             session['video_limit'] = 0
 
         if session['video_limit'] >= VIDEO_LIMIT:
-            flash('Timer until next wish...')
+            flash('Wishes expired for 24 hours... Please come back later.')
             return redirect('/genie', code=403)
 
         # Reads words from txt file, and selects a random word to input

@@ -5,6 +5,7 @@ const SEND_FAVORITE = '/favorite_video';
 const $box = $('#box');
 const $box2 = $('#box2');
 const $box3 = $('#box3');
+const $box4 = $('#box4');
 
 window.addEventListener('scroll', moveGenie, { passive: true });
 
@@ -41,6 +42,25 @@ function moveGenie2(evt) {
 };
 //Event for moving login image.
 $(document).on('mousemove', moveGenie2);
+
+
+
+
+/**
+ * Event for moving Login page Genie Head image--> follows mouse.
+ */
+function moveFinalGenie(evt) {
+  const x = evt.clientX / window.innerWidth - 0.5;
+  const y = 0.5 - evt.clientY / window.innerHeight;
+
+  const rotationX = y * 120;
+  const rotationY = x * 120;
+
+  $box4.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
+
+};
+//Event for moving login image.
+$(document).on('mousemove', moveFinalGenie);
 
 
 
@@ -88,15 +108,14 @@ $("#login-button-on-splash").on('click', homepageOk);
 
 
 //Genie Face Sound
-
 function thwompSound() {
   const genieYellSound = document.getElementById('thwompSnd');
   if (genieYellSound) {
     genieYellSound.play();
   }
 }
-
 $('#box2').on('click', thwompSound);
+
 
 //Login Page Sound Ok
 function loginSound() {
@@ -204,6 +223,29 @@ window.addEventListener('load', function () {
 });
 
 
+
+//Genie Final Face Sound
+function genieLaughSound() {
+  const genieFinalLaughSound = document.getElementById('genieLaughSnd');
+  genieFinalLaughSound.volume = 0.4;
+  if (genieFinalLaughSound) {
+    genieFinalLaughSound.play();
+  }
+}
+
+function genieLaughAndExitButton() {
+  setTimeout(() => {
+    const genieHomeButton = $('<button>').text('Exit').addClass('genie-exit-button');
+    genieHomeButton.on('click', function () {
+      window.location.href = '/';
+    });
+    $('#genie-button').append(genieHomeButton);
+  }, 2000);
+}
+
+$('#box4').on('click', genieLaughAndExitButton);
+
+$('#box4').on('click', genieLaughSound);
 
 ///////////////////////////////////////////////////////////////////////////////
 /**

@@ -139,7 +139,7 @@ margin-left: 10px;
 .box {
   width: 90%;
   height: 60%;
-  background-image: url('/static/images/genie_full.png');
+  background-image: url('/static/images/full-genie-with-tail.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -161,7 +161,7 @@ margin-left: 10px;
   gap: 10px;
   transform: rotateY(0deg);
   margin-top: 780px;
-  margin-left: 23px;
+  margin-left: 4px;
 }
 
 .homepage-buttons button {
@@ -402,6 +402,62 @@ margin-left: 10px;
   height: 100vh;
 }
 
+
+#genie-img-graphic img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.container4 {
+  position: fixed;
+  top: 0;
+  left: 46%;
+  transform: translateX(-50%);
+  perspective: 1000px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 700px;
+}
+
+.box4 {
+  width: 90%;
+  height: auto;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-out;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.box4:hover {
+  transform: rotateX(180deg);
+}
+
+
+.genie-exit-button {
+  position: fixed;
+  top: 250px;
+  right: 450px;
+  z-index: 2;
+  background-color: rgb(68, 80, 193);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  width: 5%;
+  height: 5%;
+  font-size: 2vw;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3)
+}
+
+.genie-exit-button:hover{
+  animation: flash 1s infinite;
+}
 
 /* ==================================== FX */
 
