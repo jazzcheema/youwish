@@ -157,7 +157,7 @@ def login():
             flash(f"Hello, {user.username}!", "success")
             return redirect("/wish")
 
-        flash("Invalid credentials.", 'danger')
+        flash("Invalid credentials", 'danger')
 
     return render_template('login.html', form=form)
 
@@ -273,7 +273,6 @@ def edit_user_profile():
 
 
 
-
 ##################################Youtube API / Wish Page
 ##############################################################################
 
@@ -385,8 +384,8 @@ def youtube_search():
                     ⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀''')
             return (jsonify(video_data), 201)
 
-
-    return render_template('display.html', video=None)
+    top_users = check_blocked_total()
+    return render_template('display.html', video=None, top_users=top_users)
 
 
 ##################################Page for Genie to appear
@@ -413,6 +412,12 @@ def show_genie():
         return redirect('/')
 
     g.user.blocked = True
+
+    if g.user.blocked_total is None:
+        g.user.blocked_total = 1
+    else:
+        g.user.blocked_total += 1
+
     db.session.commit()
     print('''
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣠⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -499,15 +504,15 @@ def reset_password(token):
 
 
 def clear_blocked_users():
-    with app.app_context():
-        blocked_users = User.query.filter(User.blocked == True).all()
+    """Checks for any blocked users in databse and turns them to false."""
+    blocked_users = User.query.filter(User.blocked == True).all()
 
-        for user in blocked_users:
-            user.blocked = False
+    for user in blocked_users:
+        user.blocked = False
 
-        db.session.commit()
-        print('cleared user')
-        print("""
+    db.session.commit()
+    print('cleared user')
+    print("""
 ⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
 ⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
 ⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
@@ -523,6 +528,16 @@ def clear_blocked_users():
 ⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
 """)
+
+
+def check_blocked_total():
+    """Checks the blocked users total and stores top three users in a list."""
+    top_blocked_users = User.query.filter(User.blocked_total >= 1).order_by(User.blocked_total.desc()).limit(3).all()
+
+    return top_blocked_users
+
+
+
 
 
 

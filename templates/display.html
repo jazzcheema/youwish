@@ -38,7 +38,7 @@
 
 
 <div class="video-content">
-  <h2 class="page-title">Wish...</h2>
+  <h2 class="page-title"></h2>
   <br>
   <form>
     <div class="video-container">
@@ -55,9 +55,21 @@
       </div>
     </div>
   </form>
-
 </div>
 
+<div class="blocked-container">
+<div class="top-blocked-container">
+  {% for user in top_users%}
+  <div class="user-blocked-container">
+    <img id="blocked-user-image" src="{{user.image_url}}" alt="{{user.username}}">
+    <div class="blocked-user-details">
+      <p>Blocked Total: {{ user.blocked_total }}</p>
+      <p>Username: {{ user.username }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
 
 <audio id="genieLampSnd" preload="auto">
   <source src="/static/sounds/genie_lamp_snd.mp3" type="audio/mp3">

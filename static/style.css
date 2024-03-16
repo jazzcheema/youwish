@@ -272,6 +272,8 @@ margin-left: 10px;
 .login-form{
   padding-top: 640px;
 }
+
+
 /* ==================================== Wish Page */
 
 .video-content{
@@ -302,7 +304,7 @@ margin-left: 10px;
 .container3 {
   position: fixed;
   top: 0;
-  left: 48%;
+  left: 47%;
   transform: translateX(-50%);
   perspective: 1000px;
   height: 100px;
@@ -329,6 +331,46 @@ margin-left: 10px;
   transform: rotateX(180deg);
 }
 
+ #blocked-user-image{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.top-blocked-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.user-blocked-container{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blocked-user-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.blocked-user-details {
+  margin-top: 10px;
+}
+
+.blocked-user-details p{
+  margin: 0;
+  font-size: 12px;
+  object-fit: cover;
+}
+
+.top-blocked-container{
+  margin-top: 825px;
+}
 /* ==================================== Favorites Page */
 
 #unfavorite-button{
