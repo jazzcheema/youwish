@@ -1,0 +1,632 @@
+/Users/jaskamalcheema/rithm/youtube_3/blocked.py:20: SyntaxWarning: invalid escape sequence '\_'
+  print('''
+/Users/jaskamalcheema/rithm/youtube_3/blocked.py:20: SyntaxWarning: invalid escape sequence '\_'
+  print('''
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:4[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m app
+[1;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmodels[39;00m [38;5;28;01mimport[39;00m db, User
+
+File [0;32m~/rithm/youtube_3/app.py:2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+/Users/jaskamalcheema/rithm/youtube_3/blocked.py:20: SyntaxWarning: invalid escape sequence '\_'
+  print('''
+/Users/jaskamalcheema/rithm/youtube_3/blocked.py:20: SyntaxWarning: invalid escape sequence '\_'
+  print('''
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:4[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m app
+[1;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmodels[39;00m [38;5;28;01mimport[39;00m db, User
+
+File [0;32m~/rithm/youtube_3/app.py:2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+/Users/jaskamalcheema/rithm/youtube_3/blocked.py:20: SyntaxWarning: invalid escape sequence '\_'
+  print('''
+/Users/jaskamalcheema/rithm/youtube_3/blocked.py:20: SyntaxWarning: invalid escape sequence '\_'
+  print('''
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:4[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m app
+[1;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmodels[39;00m [38;5;28;01mimport[39;00m db, User
+
+File [0;32m~/rithm/youtube_3/app.py:2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;36m  File [0;32m~/rithm/youtube_3/blocked.py:2[0;36m[0m
+[0;31m    from app[0m
+[0m            ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+/Users/jaskamalcheema/rithm/youtube_3/app.py:510: SyntaxWarning: invalid escape sequence '\_'
+  print('''
+/Users/jaskamalcheema/rithm/youtube_3/app.py:510: SyntaxWarning: invalid escape sequence '\_'
+  print('''
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      8[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      8[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      8[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      8[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      8[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      8[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:6[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      4[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+[0;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      6[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+
+File [0;32m~/rithm/youtube_3/app.py:6[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      4[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+[0;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      6[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+
+File [0;32m~/rithm/youtube_3/app.py:6[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      4[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+[0;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      6[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+
+File [0;32m~/rithm/youtube_3/app.py:6[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      4[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+[0;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      6[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+
+File [0;32m~/rithm/youtube_3/app.py:6[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      4[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+[0;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      6[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+
+File [0;32m~/rithm/youtube_3/app.py:6[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      4[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+[0;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      6[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+
+File [0;32m~/rithm/youtube_3/app.py:6[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      4[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+[0;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      6[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+
+File [0;32m~/rithm/youtube_3/app.py:6[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      4[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m/Users/jaskamalcheema/rithm/youtube_3[39m[38;5;124m'[39m)
+[0;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:3[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:5[0m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path  [38;5;66;03m# Python 3.6+ only[39;00m
+[1;32m      3[0m env_path [38;5;241m=[39m Path([38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m) [38;5;241m/[39m [38;5;124m'[39m[38;5;124m.env[39m[38;5;124m'[39m
+[0;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:5[0m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path  [38;5;66;03m# Python 3.6+ only[39;00m
+[1;32m      3[0m env_path [38;5;241m=[39m Path([38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m) [38;5;241m/[39m [38;5;124m'[39m[38;5;124m.env[39m[38;5;124m'[39m
+[0;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:5[0m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path  [38;5;66;03m# Python 3.6+ only[39;00m
+[1;32m      3[0m env_path [38;5;241m=[39m Path([38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m) [38;5;241m/[39m [38;5;124m'[39m[38;5;124m.env[39m[38;5;124m'[39m
+[0;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:5[0m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path  [38;5;66;03m# Python 3.6+ only[39;00m
+[1;32m      3[0m env_path [38;5;241m=[39m Path([38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m) [38;5;241m/[39m [38;5;124m'[39m[38;5;124m.env[39m[38;5;124m'[39m
+[0;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:5[0m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path  [38;5;66;03m# Python 3.6+ only[39;00m
+[1;32m      3[0m env_path [38;5;241m=[39m Path([38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m) [38;5;241m/[39m [38;5;124m'[39m[38;5;124m.env[39m[38;5;124m'[39m
+[0;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:5[0m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path  [38;5;66;03m# Python 3.6+ only[39;00m
+[1;32m      3[0m env_path [38;5;241m=[39m Path([38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m) [38;5;241m/[39m [38;5;124m'[39m[38;5;124m.env[39m[38;5;124m'[39m
+[0;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:5[0m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path  [38;5;66;03m# Python 3.6+ only[39;00m
+[1;32m      3[0m env_path [38;5;241m=[39m Path([38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m) [38;5;241m/[39m [38;5;124m'[39m[38;5;124m.env[39m[38;5;124m'[39m
+[0;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:5[0m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path  [38;5;66;03m# Python 3.6+ only[39;00m
+[1;32m      3[0m env_path [38;5;241m=[39m Path([38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m) [38;5;241m/[39m [38;5;124m'[39m[38;5;124m.env[39m[38;5;124m'[39m
+[0;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask[39;00m [38;5;28;01mimport[39;00m Flask, render_template, request, flash, redirect, session, g, jsonify
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mflask_debugtoolbar[39;00m [38;5;28;01mimport[39;00m DebugToolbarExtension
+
+[0;31mModuleNotFoundError[0m: No module named 'dotenv'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/cron_wrapper.py:3[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[0;32m----> 3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mblocked[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      5[0m [38;5;28;01mdef[39;00m [38;5;21mmain[39m():
+[1;32m      6[0m     [38;5;66;03m# Load environment variables from .env file[39;00m
+[1;32m      7[0m     env_path [38;5;241m=[39m os[38;5;241m.[39mpath[38;5;241m.[39mjoin(os[38;5;241m.[39mpath[38;5;241m.[39mdirname([38;5;18m__file__[39m), [38;5;124m'[39m[38;5;124m.env[39m[38;5;124m'[39m)
+
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:28[0m
+[1;32m     24[0m load_dotenv(dotenv_path[38;5;241m=[39menv_path)
+[1;32m     26[0m app [38;5;241m=[39m Flask([38;5;18m__name__[39m)
+[0;32m---> 28[0m app[38;5;241m.[39mconfig[[38;5;124m'[39m[38;5;124mSQLALCHEMY_DATABASE_URI[39m[38;5;124m'[39m] [38;5;241m=[39m [43mos[49m[38;5;241;43m.[39;49m[43menviron[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mDATABASE_URL[39;49m[38;5;124;43m'[39;49m[43m][49m
+[1;32m     29[0m app[38;5;241m.[39mconfig[[38;5;124m'[39m[38;5;124mSQLALCHEMY_ECHO[39m[38;5;124m'[39m] [38;5;241m=[39m [38;5;28;01mFalse[39;00m
+[1;32m     30[0m app[38;5;241m.[39mconfig[[38;5;124m'[39m[38;5;124mDEBUG_TB_INTERCEPT_REDIRECTS[39m[38;5;124m'[39m] [38;5;241m=[39m [38;5;28;01mFalse[39;00m
+
+File [0;32m<frozen os>:679[0m, in [0;36m__getitem__[0;34m(self, key)[0m
+
+[0;31mKeyError[0m: 'DATABASE_URL'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+File [0;32m~/rithm/youtube_3/cron_wrapper.py:3[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdotenv[39;00m [38;5;28;01mimport[39;00m load_dotenv
+[0;32m----> 3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mblocked[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      5[0m [38;5;28;01mdef[39;00m [38;5;21mmain[39m():
+[1;32m      6[0m     [38;5;66;03m# Load environment variables from .env file[39;00m
+[1;32m      7[0m     env_path [38;5;241m=[39m os[38;5;241m.[39mpath[38;5;241m.[39mjoin(os[38;5;241m.[39mpath[38;5;241m.[39mdirname([38;5;18m__file__[39m), [38;5;124m'[39m[38;5;124m.env[39m[38;5;124m'[39m)
+
+File [0;32m~/rithm/youtube_3/blocked.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Clears blocked users and gives them access to YouWish."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mapp[39;00m [38;5;28;01mimport[39;00m clear_blocked_users
+[1;32m      7[0m clear_blocked_users()
+
+File [0;32m~/rithm/youtube_3/app.py:28[0m
+[1;32m     24[0m load_dotenv(dotenv_path[38;5;241m=[39menv_path)
+[1;32m     26[0m app [38;5;241m=[39m Flask([38;5;18m__name__[39m)
+[0;32m---> 28[0m app[38;5;241m.[39mconfig[[38;5;124m'[39m[38;5;124mSQLALCHEMY_DATABASE_URI[39m[38;5;124m'[39m] [38;5;241m=[39m [43mos[49m[38;5;241;43m.[39;49m[43menviron[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mDATABASE_URL[39;49m[38;5;124;43m'[39;49m[43m][49m
+[1;32m     29[0m app[38;5;241m.[39mconfig[[38;5;124m'[39m[38;5;124mSQLALCHEMY_ECHO[39m[38;5;124m'[39m] [38;5;241m=[39m [38;5;28;01mFalse[39;00m
+[1;32m     30[0m app[38;5;241m.[39mconfig[[38;5;124m'[39m[38;5;124mDEBUG_TB_INTERCEPT_REDIRECTS[39m[38;5;124m'[39m] [38;5;241m=[39m [38;5;28;01mFalse[39;00m
+
+File [0;32m<frozen os>:679[0m, in [0;36m__getitem__[0;34m(self, key)[0m
+
+[0;31mKeyError[0m: 'DATABASE_URL'
+cleared user
+cleared user
+cleared user
+cleared user
+cleared user
+cleared user
+cleared user
+cleared user
+cleared user
+cleared user
+cleared user
+cleared user
+cleared user
+
+⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
+⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
+⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
+⢸⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠈⡇
+⢸⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⡇
+⠘⡆⢸⠀⢀⣀⣤⣄⡀⠀⠀⠀⢀⣤⣤⣄⡀⠀⡇⡸⠀
+⠀⠘⣾⠀⣿⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⣿⠀⡗⠁⠀
+⠀⠀⣿⠀⠙⢿⣿⠿⠃⢠⢠⡀⠙⠿⣿⠿⠃⠀⡇⠀⠀
+⠀⠀⠘⣄⡀⠀⠀⠀⢠⣿⢸⣿⠀⠀⠀⠀⠀⣠⠇⠀⠀
+⠀⠀⠀⠀⡏⢷⡄⠀⠘⠟⠈⠿⠁⠀⢠⡞⡹⠁⠀⠀⠀
+⠀⠀⠀⠀⢹⠸⠘⢢⢠⠤⠤⡤⡄⢰⢡⠁⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠣⣹⢸⠒⠒⡗⡇⣩⠌⢀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
+
+cleared user
+
+⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
+⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
+⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
+⢸⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠈⡇
+⢸⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⡇
+⠘⡆⢸⠀⢀⣀⣤⣄⡀⠀⠀⠀⢀⣤⣤⣄⡀⠀⡇⡸⠀
+⠀⠘⣾⠀⣿⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⣿⠀⡗⠁⠀
+⠀⠀⣿⠀⠙⢿⣿⠿⠃⢠⢠⡀⠙⠿⣿⠿⠃⠀⡇⠀⠀
+⠀⠀⠘⣄⡀⠀⠀⠀⢠⣿⢸⣿⠀⠀⠀⠀⠀⣠⠇⠀⠀
+⠀⠀⠀⠀⡏⢷⡄⠀⠘⠟⠈⠿⠁⠀⢠⡞⡹⠁⠀⠀⠀
+⠀⠀⠀⠀⢹⠸⠘⢢⢠⠤⠤⡤⡄⢰⢡⠁⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠣⣹⢸⠒⠒⡗⡇⣩⠌⢀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
+
+cleared user
+
+⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
+⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
+⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
+⢸⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠈⡇
+⢸⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⡇
+⠘⡆⢸⠀⢀⣀⣤⣄⡀⠀⠀⠀⢀⣤⣤⣄⡀⠀⡇⡸⠀
+⠀⠘⣾⠀⣿⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⣿⠀⡗⠁⠀
+⠀⠀⣿⠀⠙⢿⣿⠿⠃⢠⢠⡀⠙⠿⣿⠿⠃⠀⡇⠀⠀
+⠀⠀⠘⣄⡀⠀⠀⠀⢠⣿⢸⣿⠀⠀⠀⠀⠀⣠⠇⠀⠀
+⠀⠀⠀⠀⡏⢷⡄⠀⠘⠟⠈⠿⠁⠀⢠⡞⡹⠁⠀⠀⠀
+⠀⠀⠀⠀⢹⠸⠘⢢⢠⠤⠤⡤⡄⢰⢡⠁⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠣⣹⢸⠒⠒⡗⡇⣩⠌⢀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
+
+cleared user
+
+⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
+⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
+⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
+⢸⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠈⡇
+⢸⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⡇
+⠘⡆⢸⠀⢀⣀⣤⣄⡀⠀⠀⠀⢀⣤⣤⣄⡀⠀⡇⡸⠀
+⠀⠘⣾⠀⣿⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⣿⠀⡗⠁⠀
+⠀⠀⣿⠀⠙⢿⣿⠿⠃⢠⢠⡀⠙⠿⣿⠿⠃⠀⡇⠀⠀
+⠀⠀⠘⣄⡀⠀⠀⠀⢠⣿⢸⣿⠀⠀⠀⠀⠀⣠⠇⠀⠀
+⠀⠀⠀⠀⡏⢷⡄⠀⠘⠟⠈⠿⠁⠀⢠⡞⡹⠁⠀⠀⠀
+⠀⠀⠀⠀⢹⠸⠘⢢⢠⠤⠤⡤⡄⢰⢡⠁⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠣⣹⢸⠒⠒⡗⡇⣩⠌⢀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
+
+cleared user
+
+⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
+⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
+⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
+⢸⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠈⡇
+⢸⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⡇
+⠘⡆⢸⠀⢀⣀⣤⣄⡀⠀⠀⠀⢀⣤⣤⣄⡀⠀⡇⡸⠀
+⠀⠘⣾⠀⣿⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⣿⠀⡗⠁⠀
+⠀⠀⣿⠀⠙⢿⣿⠿⠃⢠⢠⡀⠙⠿⣿⠿⠃⠀⡇⠀⠀
+⠀⠀⠘⣄⡀⠀⠀⠀⢠⣿⢸⣿⠀⠀⠀⠀⠀⣠⠇⠀⠀
+⠀⠀⠀⠀⡏⢷⡄⠀⠘⠟⠈⠿⠁⠀⢠⡞⡹⠁⠀⠀⠀
+⠀⠀⠀⠀⢹⠸⠘⢢⢠⠤⠤⡤⡄⢰⢡⠁⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠣⣹⢸⠒⠒⡗⡇⣩⠌⢀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
+
+cleared user
+
+⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
+⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
+⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
+⢸⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠈⡇
+⢸⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⡇
+⠘⡆⢸⠀⢀⣀⣤⣄⡀⠀⠀⠀⢀⣤⣤⣄⡀⠀⡇⡸⠀
+⠀⠘⣾⠀⣿⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⣿⠀⡗⠁⠀
+⠀⠀⣿⠀⠙⢿⣿⠿⠃⢠⢠⡀⠙⠿⣿⠿⠃⠀⡇⠀⠀
+⠀⠀⠘⣄⡀⠀⠀⠀⢠⣿⢸⣿⠀⠀⠀⠀⠀⣠⠇⠀⠀
+⠀⠀⠀⠀⡏⢷⡄⠀⠘⠟⠈⠿⠁⠀⢠⡞⡹⠁⠀⠀⠀
+⠀⠀⠀⠀⢹⠸⠘⢢⢠⠤⠤⡤⡄⢰⢡⠁⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠣⣹⢸⠒⠒⡗⡇⣩⠌⢀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
+
+cleared user
+
+⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
+⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
+⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
+⢸⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠈⡇
+⢸⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⡇
+⠘⡆⢸⠀⢀⣀⣤⣄⡀⠀⠀⠀⢀⣤⣤⣄⡀⠀⡇⡸⠀
+⠀⠘⣾⠀⣿⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⣿⠀⡗⠁⠀
+⠀⠀⣿⠀⠙⢿⣿⠿⠃⢠⢠⡀⠙⠿⣿⠿⠃⠀⡇⠀⠀
+⠀⠀⠘⣄⡀⠀⠀⠀⢠⣿⢸⣿⠀⠀⠀⠀⠀⣠⠇⠀⠀
+⠀⠀⠀⠀⡏⢷⡄⠀⠘⠟⠈⠿⠁⠀⢠⡞⡹⠁⠀⠀⠀
+⠀⠀⠀⠀⢹⠸⠘⢢⢠⠤⠤⡤⡄⢰⢡⠁⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠣⣹⢸⠒⠒⡗⡇⣩⠌⢀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
+
+cleared user
+
+⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
+⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
+⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
+⢸⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠈⡇
+⢸⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⡇
+⠘⡆⢸⠀⢀⣀⣤⣄⡀⠀⠀⠀⢀⣤⣤⣄⡀⠀⡇⡸⠀
+⠀⠘⣾⠀⣿⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⣿⠀⡗⠁⠀
+⠀⠀⣿⠀⠙⢿⣿⠿⠃⢠⢠⡀⠙⠿⣿⠿⠃⠀⡇⠀⠀
+⠀⠀⠘⣄⡀⠀⠀⠀⢠⣿⢸⣿⠀⠀⠀⠀⠀⣠⠇⠀⠀
+⠀⠀⠀⠀⡏⢷⡄⠀⠘⠟⠈⠿⠁⠀⢠⡞⡹⠁⠀⠀⠀
+⠀⠀⠀⠀⢹⠸⠘⢢⢠⠤⠤⡤⡄⢰⢡⠁⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠣⣹⢸⠒⠒⡗⡇⣩⠌⢀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
+
+cleared user
+
+⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
+⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
+⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
+⢸⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠈⡇
+⢸⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⡇
+⠘⡆⢸⠀⢀⣀⣤⣄⡀⠀⠀⠀⢀⣤⣤⣄⡀⠀⡇⡸⠀
+⠀⠘⣾⠀⣿⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⣿⠀⡗⠁⠀
+⠀⠀⣿⠀⠙⢿⣿⠿⠃⢠⢠⡀⠙⠿⣿⠿⠃⠀⡇⠀⠀
+⠀⠀⠘⣄⡀⠀⠀⠀⢠⣿⢸⣿⠀⠀⠀⠀⠀⣠⠇⠀⠀
+⠀⠀⠀⠀⡏⢷⡄⠀⠘⠟⠈⠿⠁⠀⢠⡞⡹⠁⠀⠀⠀
+⠀⠀⠀⠀⢹⠸⠘⢢⢠⠤⠤⡤⡄⢰⢡⠁⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠣⣹⢸⠒⠒⡗⡇⣩⠌⢀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
+
+cleared user
+
+⠀⠀⠀⠀⣀⠤⠔⠒⠒⠒⠒⠒⠒⠒⠦⢄⣀⠀⠀⠀⠀
+⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢄⠀⠀
+⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀
+⢸⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠈⡇
+⢸⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⡇
+⠘⡆⢸⠀⢀⣀⣤⣄⡀⠀⠀⠀⢀⣤⣤⣄⡀⠀⡇⡸⠀
+⠀⠘⣾⠀⣿⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⣿⠀⡗⠁⠀
+⠀⠀⣿⠀⠙⢿⣿⠿⠃⢠⢠⡀⠙⠿⣿⠿⠃⠀⡇⠀⠀
+⠀⠀⠘⣄⡀⠀⠀⠀⢠⣿⢸⣿⠀⠀⠀⠀⠀⣠⠇⠀⠀
+⠀⠀⠀⠀⡏⢷⡄⠀⠘⠟⠈⠿⠁⠀⢠⡞⡹⠁⠀⠀⠀
+⠀⠀⠀⠀⢹⠸⠘⢢⢠⠤⠤⡤⡄⢰⢡⠁⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠣⣹⢸⠒⠒⡗⡇⣩⠌⢀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⢧⡀⠀⠉⠉⠉⠉⠁⠀⣀⠜⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⠤⠤⠤⠔⠊⠁⠀⠀⠀⠀
+
