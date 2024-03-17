@@ -10,7 +10,16 @@
   src:url(TT-Norms-Pro-Normal.otf)
 }
 
+
+/* ====================================== 13 inch Macbook */
+
+
+
+
+
+
 /* ====================================== General */
+
 
 body {
   background-color: #e5e5e5;
@@ -196,9 +205,10 @@ margin-left: 10px;
 /* =================================== Signup Page */
 
 .signup-form{
-  margin-top: 100px;
-  padding: 100px;
+  margin-top: 270px;
+  padding: 150px;
   text-align: center;
+  z-index: 2;
 }
 
 
@@ -210,6 +220,43 @@ margin-left: 10px;
 #signup-button:hover{
   animation: flash 50ms infinite;
   cursor: pointer;
+}
+
+/* Container + box for Carpet */
+.container5 {
+  align-items: center;
+  position: absolute;
+  perspective: 1000px;
+  height: 80vh;
+  display: flex;
+  z-index: 1;
+  width: 50%;
+  height: 50%;
+  pointer-events: none;
+  margin-bottom: 600px;
+  margin-left: 27%;
+  margin-top: -10px;
+}
+
+
+.box5 {
+
+  width: 90%;
+  height: 60%;
+  background-image: url('/static/images/smaller_carpet.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-out;
+  cursor: pointer;
+  max-width: 100%;
+  margin-bottom: 700px;
+  pointer-events: none;
+}
+
+.box5:hover {
+  transform: rotateY(180deg);
 }
 
 
@@ -281,30 +328,49 @@ margin-left: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 80px;
+  margin-top: 125px;
+  margin-right: 50px;
+}
+
+.video-container{
+  z-index: 2;
+  position: relative;
+}
+
+
+#favorite-button-container {
+  display: flex;
+  align-items: center;
+}
+
+#video-favorite-display{
+  margin-left: 460px;
 }
 
 #favorite-button{
   text-align: center;
   border: none;
   background: none;
+  z-index: 2;
 }
 
 
 #lamp-video-display{
   background: none;
   border:none;
+  z-index: 1;
+  position: relative;
 }
 
 #lamp-video-display img{
-  width: 100%;
-  height: 100%;
+  width: 130%;
+  height: 130%;
 }
 
 .container3 {
   position: fixed;
   top: 0;
-  left: 47%;
+  left: 40%;
   transform: translateX(-50%);
   perspective: 1000px;
   height: 100px;
@@ -312,8 +378,9 @@ margin-left: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 680px;
+  margin-top: 490px;
 }
+
 
 .box3 {
   width: 90%;
@@ -374,12 +441,25 @@ margin-left: 10px;
 /* ==================================== Favorites Page */
 
 #unfavorite-button{
-
   background-color: none;
   color:red;
   border: none;
 }
 
+.video-favorites-container{
+  direction: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 35%;
+  margin-top: 30px;
+}
+
+
+#user-favorite-vid{
+padding: 10px;
+
+}
 
 /* ==================================== Edit Page */
 
@@ -419,6 +499,7 @@ margin-left: 10px;
   margin-top: 60px;
 }
 
+
 .forgot-password-form{
   margin-top: 100px;
   text-align: center;
@@ -448,6 +529,23 @@ margin-left: 10px;
 #genie-img-graphic img{
   width: 100%;
   height: 100%;
+}
+
+
+#video-webcam-container {
+  position: relative;
+  width: 0%;
+  height: 0vh;
+  opacity: 0;
+}
+
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
 }
 
 
@@ -486,7 +584,7 @@ margin-left: 10px;
   position: fixed;
   top: 250px;
   right: 450px;
-  z-index: 2;
+  z-index: 5;
   background-color: rgb(68, 80, 193);
   color: white;
   border-radius: 8px;

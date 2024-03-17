@@ -11,13 +11,13 @@
     <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <form>
-                <button formaction="/" id="nav-bar-home" class="btn btn-secondary"><img
+                <button formaction="/" id="nav-bar-home" type="button" class="btn btn-secondary"><img
                         src="/static/images/magic-lamp.png" alt="home-icon">Home</button>
                 <button formaction="/wish" formmethod="GET" class="btn btn-light" id="nav-bar-wish">Wish
                 </button>
                 <button formaction="/favorite/{{g.user.id}}" id="nav-bar-favorites"
                     class="btn btn-light">Favorites</button>
-                <button class="btn btn-light" disabled>Locked</a>
+                <button class="btn btn-light" disabled id="nav-bar-locked" formaction="/genie">Locked</a>
             </form>
         </div>
         <div class="navbar-nav">
@@ -37,23 +37,26 @@
 {% endfor %}
 {% endif %}
 
+<div class="video-favorites-container">
+    {% for favorite in user.favorites%}
+    <div> <iframe width="560" height="315" id="user-favorite-vid"
+            src="https://www.youtube.com/embed/{{ favorite.video_id }}" frameborder="0" allowfullscreen></iframe>
+        <form method="POST" action="/favorite_video/{{favorite.video_id}}">
+            {{ g.csrf_form.hidden_tag() }}
+            <button class="btn btn-outline-primary btn-sm" id="unfavorite-button">
+                <i class="bi bi-heart-fill"></i>
+            </button>
+        </form>
+    </div>
 
-{% for favorite in user.favorites%}
-<div> <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ favorite.video_id }}" frameborder="0"
-        allowfullscreen></iframe>
-    <form method="POST" action="/favorite_video/{{favorite.video_id}}">
-        {{ g.csrf_form.hidden_tag() }}
-        <button class="btn btn-outline-primary btn-sm" id="unfavorite-button">
-            <i class="bi bi-heart-fill"></i>
-        </button>
-    </form>
+
+
+    {% endfor %}
 </div>
-
 <audio id="homeButtonSnd" preload="auto">
     <source src="/static/sounds/locked_genie.wav" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
 
-{% endfor %}
 
 {% endblock %}

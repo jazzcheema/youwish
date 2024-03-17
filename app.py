@@ -324,7 +324,7 @@ def youtube_search():
                         31,32,33,34,35,36,37,38,39,40,41,42,43,44]
         random_video_cat_id = choice(video_cat_ids)
 
-        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_2)
+        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_6)
 
         # Call Youtube API and retrieve videos with input from random word
         # and random category. Cannot pull video stats with this call,

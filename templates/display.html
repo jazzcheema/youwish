@@ -50,7 +50,7 @@
     <div class="container3">
       <div class="box3" id="box3">
         <button type="click" id="lamp-video-display">
-          <img id="magic-lamp-graphic" src="/static/images/real_magic_lamp.png" alt="magic-lamp">
+          <img id="magic-lamp-graphic" src="/static/images/lamp-3.png" alt="magic-lamp">
         </button>
       </div>
     </div>
@@ -58,17 +58,17 @@
 </div>
 
 <div class="blocked-container">
-<div class="top-blocked-container">
-  {% for user in top_users%}
-  <div class="user-blocked-container">
-    <img id="blocked-user-image" src="{{user.image_url}}" alt="{{user.username}}">
-    <div class="blocked-user-details">
-      <p>Blocked Total: {{ user.blocked_total }}</p>
-      <p>Username: {{ user.username }}</p>
+  <div class="top-blocked-container">
+    {% for user in top_users%}
+    <div class="user-blocked-container">
+      <img id="blocked-user-image" src="{{user.image_url}}" alt="{{user.username}}">
+      <div class="blocked-user-details">
+        <p>Blocked Total: {{ user.blocked_total }}</p>
+        <p>Username: {{ user.username }}</p>
+      </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
 </div>
 
 <audio id="genieLampSnd" preload="auto">

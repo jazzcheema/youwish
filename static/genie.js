@@ -6,6 +6,9 @@ const $box = $('#box');
 const $box2 = $('#box2');
 const $box3 = $('#box3');
 const $box4 = $('#box4');
+const $box5 = $('#box5');
+
+
 
 window.addEventListener('scroll', moveGenie, { passive: true });
 
@@ -42,6 +45,22 @@ function moveGenie2(evt) {
 };
 //Event for moving login image.
 $(document).on('mousemove', moveGenie2);
+
+
+/**
+ * Event for moving Carpet on signup page--> follows mouse.
+ */
+function moveCarpet(evt) {
+  const x = evt.clientX / window.innerWidth - 0.5;
+  const y = 0.5 - evt.clientY / window.innerHeight;
+
+  const rotationX = y * 60;
+  const rotationY = x * 60;
+
+  $box5.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
+};
+//Event for moving carpet.
+$(document).on('mousemove', moveCarpet);
 
 
 
@@ -213,7 +232,6 @@ $('#edit-user-button').on('click', editProfileSound);
 
 
 
-
 //Genie Page Music
 window.addEventListener('load', function () {
   const genieSnd = document.getElementById('geniePageSnd');
@@ -223,16 +241,30 @@ window.addEventListener('load', function () {
 });
 
 
-
 //Genie Final Face Sound
-function genieLaughSound() {
+async function genieLaughSound() {
   const genieFinalLaughSound = document.getElementById('genieLaughSnd');
   genieFinalLaughSound.volume = 0.4;
   if (genieFinalLaughSound) {
     genieFinalLaughSound.play();
   }
-}
+  $('#video-webcam-container').css({
+    'opacity': '1',
+    'width': '100%',
+    'height': '100vh',
+    'background-size': 'cover',
+    'background-position': 'center',
+    'background-image': 'url(/static/images/genie_background.gif)'
+  }).append(addWebCam);
 
+  const videoElement = document.getElementById('video');
+  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+  videoElement.srcObject = stream;
+}
+$('#box4').on('click', genieLaughSound);
+
+
+//Genie page--> button appears to exit when his face is clicked.
 function genieLaughAndExitButton() {
   setTimeout(() => {
     const genieHomeButton = $('<button>').text('Exit').addClass('genie-exit-button');
@@ -242,10 +274,8 @@ function genieLaughAndExitButton() {
     $('#genie-button').append(genieHomeButton);
   }, 2000);
 }
-
 $('#box4').on('click', genieLaughAndExitButton);
 
-$('#box4').on('click', genieLaughSound);
 
 ///////////////////////////////////////////////////////////////////////////////
 /**
@@ -255,17 +285,27 @@ $('#box4').on('click', genieLaughSound);
 function generateHtmlMarkup(video) {
   return $(`
     <ul>
-      <p><strong>Views:</strong> ${video.views}</p>
+
         <iframe width="560" height="315"
         src="https://www.youtube.com/embed/${video.id}?controls=0&showinfo=0&modestbranding=1"
         frameborder="0" allowfullscreen>
         </iframe>
+        <div id="favorite-button-container">
+        <p id="video-views-display">Views: ${video.views}</p>
           <button
           id="favorite-button"
           data-id="${video.id}"
-          type="submit"><i class="bi bi-heart"></i></button>
+          type="submit"><i id="video-favorite-display" class="bi bi-heart"></i></button>
+          </div>
   `);
 }
+
+function addWebCam() {
+  return $(`
+  <video id="video" autoplay></video>
+  `);
+}
+
 
 /**
  *
@@ -287,7 +327,7 @@ function addVideoToPage(video) {
 async function displayVideo(evt) {
   evt.preventDefault();
   $(".video-container").empty();
-
+  $('#magic-lamp-graphic').attr('src', '/static/images/lamp-3.png');
   let response;
   do {
     response = await fetch(WISH_API_ENDPOINT, {
@@ -301,11 +341,13 @@ async function displayVideo(evt) {
 
   if (response.status === 201) {
     const videoData = await response.json();
+    $('#magic-lamp-graphic').attr('src', '/static/images/lamp-container-3.png');
     addVideoToPage(videoData);
   }
 }
 //Event for clicking on lamp.
 $('#lamp-video-display').on('click', displayVideo);
+
 
 /**
  * Timeout function that enables locked button in nav--> changes text and color.
@@ -319,14 +361,15 @@ function callGenie() {
   if (genieReadySnd) {
     genieReadySnd.play();
   }
-  $('#magic-lamp-graphic').attr('src', '/static/images/real_magic_lamp_smoke.png');
+
+  $('#magic-lamp-graphic').attr('src', '/static/images/lamp-smoke-3.png');
   $('#magic-lamp-graphic').css({
     'animation': 'flash 2s infinite',
   });
   $("#nav-bar-locked").text("Visit Genie").removeClass("btn-light");
   $("#nav-bar-locked").addClass("activate-genie-button").prop("disabled", false);
 }
-
+//
 /**
  * Event for favoriting a video. Adds video to user's favorite list, and
  * changes button.
@@ -353,7 +396,7 @@ async function favorite(evt) {
     $button.css({
       'background-color': '',
       'color': 'red'
-    }).html('<i class="bi bi-heart-fill"></i>');
+    }).html('<i id="video-favorite-display" class="bi bi-heart-fill"></i>');
   } else {
     $button.css({
       'background-color': '',
