@@ -9,10 +9,6 @@ const $box4 = $('#box4');
 const $box5 = $('#box5');
 
 
-
-window.addEventListener('scroll', moveGenie, { passive: true });
-
-
 /**
  * Event for moving splash page Genie full body image--> follows mouse.
  */
@@ -61,7 +57,6 @@ function moveCarpet(evt) {
 };
 //Event for moving carpet.
 $(document).on('mousemove', moveCarpet);
-
 
 
 
@@ -241,7 +236,16 @@ window.addEventListener('load', function () {
 });
 
 
-//Genie Final Face Sound
+//Adds video to webcam div
+function addWebCam() {
+  return $(`
+  <video id="video" autoplay></video>
+  `);
+}
+
+/** Genie Final Face Sound w/ Webcam -> change background of container
+ *  to control the missing background when video is added.
+ */
 async function genieLaughSound() {
   const genieFinalLaughSound = document.getElementById('genieLaughSnd');
   genieFinalLaughSound.volume = 0.4;
@@ -272,7 +276,7 @@ function genieLaughAndExitButton() {
       window.location.href = '/';
     });
     $('#genie-button').append(genieHomeButton);
-  }, 2000);
+  }, 4000);
 }
 $('#box4').on('click', genieLaughAndExitButton);
 
@@ -300,12 +304,6 @@ function generateHtmlMarkup(video) {
   `);
 }
 
-function addWebCam() {
-  return $(`
-  <video id="video" autoplay></video>
-  `);
-}
-
 
 /**
  *
@@ -328,6 +326,7 @@ async function displayVideo(evt) {
   evt.preventDefault();
   $(".video-container").empty();
   $('#magic-lamp-graphic').attr('src', '/static/images/lamp-3.png');
+
   let response;
   do {
     response = await fetch(WISH_API_ENDPOINT, {

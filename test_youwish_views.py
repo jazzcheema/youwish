@@ -166,6 +166,19 @@ class UserViewTestCase(TestCase):
             self.assertEqual(resp.status_code, 403)
 
 
+    def test_user_blocked(self):
+        """Tests if user is blocked, they cannot access the site."""
+        test_user = User.query.get_or_404(self.u1_id)
+        test_user.blocked=True
+        db.session.commit()
+
+        with app.test_client() as c:
+
+            resp = c.get("/wish", follow_redirects=True)
+            html = resp.get_data(as_text=True)
+
+            self.assertEqual(resp.status_code, 200)
+            self.assertIn('<!-- homepage -->', html)
 
 
 
