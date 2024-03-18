@@ -35,7 +35,7 @@ class UserAddForm(FlaskForm):
         'Profile Image',
         choices=[('/static/images/cobra.png', 'Select from the options: Cobra'),
                                   ('/static/images/monkey.png', 'Select from the options: Monkey'),
-                                  ('/static/images/parrot.png', 'Select from the options: Parrot')],
+                                  ('/static/images/parrot.png', 'Select from the options: Falcon')],
         validators=[Length(max=255), InputRequired()]
     )
 

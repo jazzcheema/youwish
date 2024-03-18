@@ -22,8 +22,8 @@ function moveGenie(evt) {
   $box.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
   playHomePageSound();
 };
-//Event for moving splash image.
-$(document).on('mousemove', moveGenie);
+
+
 
 
 /**
@@ -39,8 +39,8 @@ function moveGenie2(evt) {
   $box2.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
 
 };
-//Event for moving login image.
-$(document).on('mousemove', moveGenie2);
+
+
 
 
 /**
@@ -55,8 +55,8 @@ function moveCarpet(evt) {
 
   $box5.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
 };
-//Event for moving carpet.
-$(document).on('mousemove', moveCarpet);
+
+
 
 
 
@@ -73,8 +73,8 @@ function moveFinalGenie(evt) {
   $box4.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
 
 };
-//Event for moving login image.
-$(document).on('mousemove', moveFinalGenie);
+
+
 
 
 
@@ -91,8 +91,7 @@ function moveLamp(evt) {
   $box3.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
 
 };
-//Event for moving login image.
-$(document).on('mousemove', moveLamp);
+
 
 
 
@@ -118,7 +117,7 @@ function homepageOk() {
     loginHomeSndOk.play();
   }
 }
-$("#login-button-on-splash").on('click', homepageOk);
+
 
 
 //Genie Face Sound
@@ -128,7 +127,7 @@ function thwompSound() {
     genieYellSound.play();
   }
 }
-$('#box2').on('click', thwompSound);
+
 
 
 //Login Page Sound Ok
@@ -138,7 +137,6 @@ function loginSound() {
     loginSndOk.play();
   }
 }
-$("#login-button-page").on('click', loginSound);
 
 
 
@@ -152,7 +150,7 @@ function forgotSound() {
     forgotSnd.play();
   }
 }
-$("#forgot-button-page").on('click', forgotSound);
+
 
 
 
@@ -163,7 +161,6 @@ function forgotSendSound() {
     sendForgotSnd.play();
   }
 }
-$("#forgot-password-button").on('click', forgotSendSound);
 
 
 
@@ -177,7 +174,7 @@ function signupSndSplash() {
     splashSignupSound.play();
   }
 }
-$('#signup-button-on-splash').on('click', signupSndSplash);
+
 
 
 
@@ -188,7 +185,7 @@ function signupSnd() {
     signupSndSubmit.play();
   }
 }
-$('#signup-button').on('click', signupSnd);
+
 
 
 
@@ -199,7 +196,7 @@ function magicLampSnd() {
     lampWishSnd.play();
   }
 }
-$('#magic-lamp-graphic').on('click', magicLampSnd);
+
 
 
 //Home Button Nav Sound
@@ -212,7 +209,7 @@ function homeButtonSound() {
     homeSnd.play();
   }
 }
-$('#nav-bar-home').on('click', homeButtonSound);
+
 
 
 
@@ -223,12 +220,12 @@ function editProfileSound() {
     editSnd.play();
   }
 }
-$('#edit-user-button').on('click', editProfileSound);
+
 
 
 
 //Genie Page Music
-window.addEventListener('load', function () {
+$(document).ready(function () {
   const genieSnd = document.getElementById('geniePageSnd');
   if (genieSnd) {
     genieSnd.play();
@@ -265,7 +262,7 @@ async function genieLaughSound() {
   const stream = await navigator.mediaDevices.getUserMedia({ video: true });
   videoElement.srcObject = stream;
 }
-$('#box4').on('click', genieLaughSound);
+
 
 
 //Genie page--> button appears to exit when his face is clicked.
@@ -278,7 +275,55 @@ function genieLaughAndExitButton() {
     $('#genie-button').append(genieHomeButton);
   }, 4000);
 }
-$('#box4').on('click', genieLaughAndExitButton);
+
+
+
+
+
+//Ensure DOM is loaded before JS.
+$(document).ready(function () {
+
+  $('#box4').on('click', genieLaughAndExitButton);
+
+  $('#box4').on('click', genieLaughSound);
+
+  $('#edit-user-button').on('click', editProfileSound);
+
+  $('#nav-bar-home').on('click', homeButtonSound);
+
+  $('#magic-lamp-graphic').on('click', magicLampSnd);
+
+  $('#signup-button').on('click', signupSnd);
+
+  $('#signup-button-on-splash').on('click', signupSndSplash);
+
+  $("#forgot-password-button").on('click', forgotSendSound);
+
+  $("#login-button-on-splash").on('click', homepageOk);
+
+  $('#box2').on('click', thwompSound);
+
+  $("#login-button-page").on('click', loginSound);
+
+  $("#forgot-button-page").on('click', forgotSound);
+
+  //event for moving wish lamp.
+  $(document).on('mousemove', moveLamp);
+
+  //Event for moving final genie.
+  $(document).on('mousemove', moveFinalGenie);
+
+  //Event for moving carpet.
+  $(document).on('mousemove', moveCarpet);
+
+  //Event for moving login genie.
+  $(document).on('mousemove', moveGenie2);
+
+  //Event for moving homepage genie.
+  $(document).on('mousemove', moveGenie);
+
+
+});
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -303,7 +348,6 @@ function generateHtmlMarkup(video) {
           </div>
   `);
 }
-
 
 /**
  *
@@ -400,7 +444,7 @@ async function favorite(evt) {
     $button.css({
       'background-color': '',
       'color': 'gray'
-    }).html('<i class="bi bi-heart"></i>');
+    }).html('<i id="video-favorite-display" class="bi bi-heart"></i>');
   }
 }
 //Event for favoriting video.

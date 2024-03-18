@@ -319,12 +319,12 @@ def youtube_search():
         max_results = 50
         order = 'date'
         view_count_min = 200
-        view_count_max = 1000
+        view_count_max = 1200
         video_cat_ids = [1,2,10,15,17,18,19,20,21,22,23,24,25,26,27,28,29,30,
                         31,32,33,34,35,36,37,38,39,40,41,42,43,44]
         random_video_cat_id = choice(video_cat_ids)
 
-        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_6)
+        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_5)
 
         # Call Youtube API and retrieve videos with input from random word
         # and random category. Cannot pull video stats with this call,
