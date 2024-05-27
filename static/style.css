@@ -2,611 +2,3554 @@
 
 @font-face {
   font-family: myFontStandard;
-  src:url(TT-Norms-Pro-Thin.otf)
+  src: url(TT-Norms-Pro-Thin.otf);
 }
 
 @font-face {
   font-family: myFontTitle;
-  src:url(TT-Norms-Pro-Normal.otf)
+  src: url(TT-Norms-Pro-Normal.otf);
 }
-
 
 /* ====================================== 13 inch Macbook */
-
-
-
-
-
-
-/* ====================================== General */
-
-
-body {
-  background-color: #e5e5e5;
-  font-family: myFontStandard;
-}
-
-.page-title{
-  text-align: center;
-}
-
-footer{
-  position: fixed;
-  left: 0;
-  bottom: -15px;
-  width: 100%;
-  background-color:#e5e5e5;
-  text-align: center;
-  padding: 1rem;
-  font-size: 14px;
-}
-
-footer img{
-object-fit: cover;
-height: 100%;
-width: 40px;
-margin-left: 10px;
-}
-
-.nav-space{
-  padding-bottom: 80px;
-}
-
-.footer-space{
-  padding-top: 80px;
-}
-
-#nav-bar{
-  z-index: 5;
-  top:0;
-  width: 100%;
-  position: fixed;
-  box-shadow: 0;
-  background-color: rgb(55, 132, 55);
-}
-
-#profile-photo{
-  height: 100%;
-  max-height:100% ;
-  object-fit: cover;
-  width: 40px;
-}
-
-.activate-genie-button{
-  background-color: red;
-  color: white;
-  animation: flash 2s infinite;
-  transition: box-shadow 0.3s;
-}
-
-.activate-genie-button:hover{
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
-  background-color: rgb(222, 80, 80);
-  color:white;
-  animation: flash 50ms infinite;
-}
-
-.navbar-nav button {
-  margin-right: 20px;
-  padding-left: 100px;
-}
-
-#nav-bar-wish {
-  padding-left: 125px;
-}
-
-
-#profile-photo{
-  margin-left: 10px;
-  padding-right: 10px;
-}
-
-#nav-bar-home{
-  font-family: myFontTitle;
-  padding-left: 10px;
-}
-
-#nav-bar-home img{
-  width: 73px;
-  height: 100%;
-  object-fit: cover;
-  margin-right: 50px;
-}
-
-#nav-bar-home:hover{
-  animation: flash 1s infinite;
-}
-
-#nav-bar-wish:hover{
-  animation: flash 1s infinite;
-}
-
-#nav-bar-favorites:hover{
-  animation: flash 1s infinite;
-}
-
-#nav-bar-logout:hover{
-  animation: flash 50ms infinite;
-}
-
-#nav-bar-logout{
-  font-family: myFontTitle;
-  padding-left: 20px;
-}
-
-/* ===================================== Homepage */
-
-.container {
-  perspective: 1000px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.box {
-  width: 90%;
-  height: 60%;
-  background-image: url('/static/images/full-genie-with-tail.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease-out;
-  cursor: pointer;
-  max-width: 100%;
-  margin-bottom: 200px;
-}
-
-.box:hover {
-  transform: rotateY(180deg);
-}
-
-.homepage-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  transform: rotateY(0deg);
-  margin-top: 780px;
-  margin-left: 4px;
-}
-
-.homepage-buttons button {
-  font-size: 2rem;
-  padding: 20px 30px;
-}
-
-#login-button-on-splash{
-  background-color: rgb(68, 80, 193);
-  color: white;
-  border-radius: 8px;
-  border: none;
-}
-
-#signup-button-on-splash{
-  background-color: rgb(200, 160, 81);
-  color: white;
-  border-radius: 8px;
-  border: none;
-}
-
-#login-button-on-splash:hover{
-  animation: flash 50ms infinite;
-}
-
-#signup-button-on-splash:hover{
-  animation: flash 1s infinite;
-}
-
-
-
-/* =================================== Signup Page */
-
-.signup-form{
-  margin-top: 270px;
-  padding: 150px;
-  text-align: center;
-  z-index: 2;
-}
-
-
-#signup-button{
-  text-align: center;
-  margin-top: 20px;
-}
-
-#signup-button:hover{
-  animation: flash 50ms infinite;
-  cursor: pointer;
-}
-
-/* Container + box for Carpet */
-.container5 {
-  align-items: center;
-  position: absolute;
-  perspective: 1000px;
-  height: 80vh;
-  display: flex;
-  z-index: 1;
-  width: 50%;
-  height: 50%;
-  pointer-events: none;
-  margin-bottom: 600px;
-  margin-left: 27%;
-  margin-top: -10px;
-}
-
-
-.box5 {
-
-  width: 90%;
-  height: 60%;
-  background-image: url('/static/images/smaller_carpet.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease-out;
-  cursor: pointer;
-  max-width: 100%;
-  margin-bottom: 700px;
-  pointer-events: none;
-}
-
-.box5:hover {
-  transform: rotateY(180deg);
-}
-
-
-/* ==================================== Login Page */
-
-.login-form{
-  text-align: center;
-  padding: 100px;
-  margin-top: 100px;
-}
-
-#login-button-page{
-  text-align: center;
-  margin-top: 20px;
-}
-
-#login-button-page:hover{
-  animation: flash 50ms infinite;
-  cursor: pointer;
-}
-
-#forgot-button-page{
-  cursor: pointer;
-  margin-top: 20px;
-
-}
-
-#forgot-button-page:hover{
-  animation: flash 1s infinite;
-}
-
-.container2 {
-  perspective: 1000px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-
-.box2 {
-  width: 90%;
-  height: 60%;
-  background-image: url('/static/images/genie_head.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease-out;
-  cursor: pointer;
-  max-width: 100%;
-  margin-bottom: 400px;
-}
-
-.box2:hover {
-  transform: rotateY(180deg);
-}
-
-.login-form{
-  padding-top: 640px;
-}
-
-
-/* ==================================== Wish Page */
-
-.video-content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 125px;
-  margin-right: 50px;
-}
-
-.video-container{
-  z-index: 2;
-  position: relative;
-}
-
-
-#favorite-button-container {
-  display: flex;
-  align-items: center;
-}
-
-#video-favorite-display{
-  margin-left: 460px;
-}
-
-#favorite-button{
-  text-align: center;
-  border: none;
-  background: none;
-  z-index: 2;
-}
-
-
-#lamp-video-display{
-  background: none;
-  border:none;
-  z-index: 1;
-  position: relative;
-}
-
-#lamp-video-display img{
-  width: 130%;
-  height: 130%;
-}
-
-.container3 {
-  position: fixed;
-  top: 0;
-  left: 40%;
-  transform: translateX(-50%);
-  perspective: 1000px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 490px;
-}
-
-
-.box3 {
-  width: 90%;
-  height: auto;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease-out;
-  cursor: pointer;
-  max-width: 100%;
-}
-
-.box3:hover {
-  transform: rotateX(180deg);
-}
-
- #blocked-user-image{
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-}
-
-.top-blocked-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.user-blocked-container{
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.blocked-user-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.blocked-user-details {
-  margin-top: 10px;
-}
-
-.blocked-user-details p{
-  margin: 0;
-  font-size: 12px;
-  object-fit: cover;
-}
-
-.top-blocked-container{
-  margin-top: 825px;
-}
-/* ==================================== Favorites Page */
-
-#unfavorite-button{
-  background-color: none;
-  color:red;
-  border: none;
-}
-
-.video-favorites-container{
-  direction: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-left: 35%;
-  margin-top: 30px;
-}
-
-
-#user-favorite-vid{
-padding: 10px;
-
-}
-
-/* ==================================== Edit Page */
-
-.edit-profile-form{
- text-align: center;
-  margin-top: 50px;
-}
-
-.profile-image-on-edit-page{
-  text-align: center;
-  margin-top: 80px;
-}
-
-.profile-image-on-edit-page img{
-  width: 20%;
-  height: auto;
-}
-
-#edit-user-button:hover{
-  animation: flash 50ms infinite;
-}
-
-#cancel-user-button:hover{
-  animation: flash 1s infinite;
-}
-
-/* ==================================== Forgot Password */
-
-.flash-password{
-  text-align: center;
-  color: red;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  margin-top: 60px;
-}
-
-
-.forgot-password-form{
-  margin-top: 100px;
-  text-align: center;
-  padding: 100px;
-}
-
-#forgot-password-button{
-  text-align: center;
-  margin-top: 20px;
-}
-
-#forgot-password-button:hover{
-  animation: flash 1s infinite;
-}
-
-
-/* ==================================== Genie Page */
-
-#genie-background {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-}
-
-
-#genie-img-graphic img{
-  width: 100%;
-  height: 100%;
-}
-
-
-#video-webcam-container {
-  position: relative;
-  width: 0%;
-  height: 0vh;
-  opacity: 0;
-}
-
-#video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  filter: brightness(50%) contrast(200%) saturate(0) hue-rotate(180deg);
-}
-
-
-.container4 {
-  position: fixed;
-  top: 0;
-  left: 46%;
-  transform: translateX(-50%);
-  perspective: 1000px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 700px;
-}
-
-.box4 {
-  width: 90%;
-  height: auto;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease-out;
-  cursor: pointer;
-  max-width: 100%;
-}
-
-.box4:hover {
-  transform: rotateX(180deg);
-}
-
-
-.genie-exit-button {
-  position: fixed;
-  top: 250px;
-  right: 450px;
-  z-index: 5;
-  background-color: rgb(68, 80, 193);
-  color: white;
-  border-radius: 8px;
-  border: none;
-  width: 5%;
-  height: 5%;
-  font-size: 2vw;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3)
-}
-
-.genie-exit-button:hover{
-  animation: flash 1s infinite;
-}
-
-/* ==================================== FX */
-
-@keyframes flash {
-  0%, 50%, 100% {
-    opacity: 1;
+@media only screen and (max-width: 1500px) and (max-height: 754px) {
+  body {
+    background-color: #e5e5e5;
+    font-family: myFontStandard;
+    overflow-y: hidden;
   }
-  25%, 75% {
+
+  .page-title {
+    text-align: center;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    background-color: #e5e5e5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  footer img {
+    object-fit: cover;
+    height: 100%;
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  .nav-space {
+    padding-bottom: 80px;
+  }
+
+  .footer-space {
+    padding-top: 80px;
+  }
+
+  #nav-bar {
+    z-index: 5;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0;
+    background-color: rgb(55, 132, 55);
+  }
+
+  #profile-photo {
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 40px;
+  }
+
+  .activate-genie-button {
+    background-color: red;
+    color: white;
+    animation: flash 2s infinite;
+    transition: box-shadow 0.3s;
+  }
+
+  .activate-genie-button:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(222, 80, 80);
+    color: white;
+    animation: flash 50ms infinite;
+  }
+
+  .navbar-nav button {
+    margin-right: 20px;
+    padding-left: 100px;
+  }
+
+  #nav-bar-wish {
+    padding-left: 125px;
+  }
+
+  #profile-photo {
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+
+  #nav-bar-home {
+    font-family: myFontTitle;
+    padding-left: 10px;
+  }
+
+  #nav-bar-home img {
+    width: 73px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 50px;
+  }
+
+  #nav-bar-home:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-wish:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-favorites:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-logout:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #nav-bar-logout {
+    font-family: myFontTitle;
+    padding-left: 20px;
+  }
+
+  /* ===================================== Homepage */
+
+  .container {
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box {
+    width: 60%;
+    height: 60%;
+    background-image: url("/static/images/full-genie-with-tail.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-top: -100px;
+  }
+
+  .box:hover {
+    transform: rotateY(180deg);
+  }
+
+  .homepage-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: rotateY(0deg);
+    margin-left: 4px;
+    margin-top: 450px;
+  }
+
+  .homepage-buttons button {
+    font-size: 2rem;
+    padding: 8px 15px;
+  }
+
+  #login-button-on-splash {
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #signup-button-on-splash {
+    background-color: rgb(200, 160, 81);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #login-button-on-splash:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #signup-button-on-splash:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* =================================== Signup Page */
+
+  .signup-form {
+    margin-top: 150px;
+    padding: 150px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  #signup-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #signup-button:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  /* Container + box for Carpet */
+  .container5 {
+    align-items: center;
+    position: absolute;
+    perspective: 1000px;
+    height: 80vh;
+    display: flex;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+    margin-bottom: 400px;
+    margin-left: 30%;
+    margin-top: 70px;
+  }
+
+  .box5 {
+    width: 80%;
+    height: 50%;
+    background-image: url("/static/images/smaller_carpet.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-bottom: 500px;
+    pointer-events: none;
+  }
+
+  .box5:hover {
+    transform: rotateY(180deg);
+  }
+
+  /* ==================================== Login Page */
+
+  .login-form {
+    text-align: center;
+    padding: 80px;
+    margin-top: -300px;
+  }
+
+  #login-button-page {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #login-button-page:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  #forgot-button-page {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  #forgot-button-page:hover {
+    animation: flash 1s infinite;
+  }
+
+  .container2 {
+    perspective: 1000px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box2 {
+    width: 80%;
+    height: 60%;
+    background-image: url("/static/images/genie_head.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-top: -200px;
+  }
+
+  .box2:hover {
+    transform: rotateY(180deg);
+  }
+
+  .login-form {
+    padding-top: 640px;
+  }
+
+  /* ==================================== Wish Page */
+
+  .video-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 125px;
+    margin-right: 50px;
+  }
+
+  .video-container {
+    z-index: 2;
+    position: relative;
+  }
+
+  #favorite-button-container {
+    display: flex;
+    align-items: center;
+  }
+
+  #video-favorite-display {
+    margin-left: 460px;
+  }
+
+  #favorite-button {
+    text-align: center;
+    border: none;
+    background: none;
+    z-index: 2;
+  }
+
+  #lamp-video-display {
+    background: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+  }
+
+  #lamp-video-display img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    width: 100vw; /* Increased width */
+    max-width: 900px; /* Increased max width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -120px;
+  }
+
+  .box3 {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box3:hover {
+    transform: rotateX(180deg);
+  }
+
+  #blocked-user-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .user-blocked-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .blocked-user-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .blocked-user-details {
+    margin-top: 10px;
+  }
+
+  .blocked-user-details p {
+    margin: 0;
+    font-size: 12px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    margin-top: 320px;
+  }
+  /* ==================================== Favorites Page */
+
+  #unfavorite-button {
+    background-color: none;
+    color: red;
+    border: none;
+  }
+
+  .video-favorites-container {
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 32%;
+    margin-top: 30px;
+  }
+
+  #user-favorite-vid {
+    padding: 10px;
+  }
+
+  /* ==================================== Edit Page */
+
+  .edit-profile-form {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .profile-image-on-edit-page {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .profile-image-on-edit-page img {
+    width: 12%;
+    height: auto;
+  }
+
+  #edit-user-button:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #cancel-user-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Forgot Password */
+
+  .flash-password {
+    text-align: center;
+    color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-top: 60px;
+  }
+
+  .forgot-password-form {
+    margin-top: 100px;
+    text-align: center;
+    padding: 100px;
+  }
+
+  #forgot-password-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #forgot-password-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Genie Page */
+
+  #genie-background {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #genie-img-graphic img {
+    width: 80%;
+    height: 80%;
+  }
+
+  #video-webcam-container {
+    position: relative;
+    width: 0%;
+    height: 0vh;
     opacity: 0;
+  }
+
+  #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    filter: brightness(50%) contrast(200%) saturate(0) hue-rotate(180deg);
+  }
+
+  .container4 {
+    position: fixed;
+    top: 0;
+    left: 46%;
+    transform: translateX(-50%);
+    perspective: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 700px;
+  }
+
+  .box4 {
+    width: 90%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box4:hover {
+    transform: rotateX(180deg);
+  }
+
+  .genie-exit-button {
+    position: fixed;
+    top: 100px;
+    right: 450px;
+    z-index: 5;
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 5%;
+    height: 5%;
+    font-size: 2vw;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .genie-exit-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== FX */
+
+  @keyframes flash {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+}
+
+/* ====================================== END OF 13 INCH MACBOOK */
+/* ====================================== END OF 13 INCH MACBOOK */
+/* ====================================== END OF 13 INCH MACBOOK */
+/* ====================================== END OF 13 INCH MACBOOK */
+/* ====================================== END OF 13 INCH MACBOOK */
+/* ====================================== END OF 13 INCH MACBOOK */
+/* ====================================== END OF 13 INCH MACBOOK */
+/* ====================================== END OF 13 INCH MACBOOK */
+/* ====================================== END OF 13 INCH MACBOOK */
+/* ====================================== END OF 13 INCH MACBOOK */
+/* ====================================== END OF 13 INCH MACBOOK */
+
+/* ====================================== General (5k lg monitor -- large monitors) */
+@media only screen and (min-width: 1500px) {
+  body {
+    background-color: #e5e5e5;
+    font-family: myFontStandard;
+    overflow-y: hidden;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    background-color: #e5e5e5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  footer img {
+    object-fit: cover;
+    height: 100%;
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  .nav-space {
+    padding-bottom: 80px;
+  }
+
+  .footer-space {
+    padding-top: 80px;
+  }
+
+  #nav-bar {
+    z-index: 5;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0;
+    background-color: rgb(55, 132, 55);
+  }
+
+  #profile-photo {
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 40px;
+  }
+
+  .activate-genie-button {
+    background-color: red;
+    color: white;
+    animation: flash 2s infinite;
+    transition: box-shadow 0.3s;
+  }
+
+  .activate-genie-button:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(222, 80, 80);
+    color: white;
+    animation: flash 50ms infinite;
+  }
+
+  .navbar-nav button {
+    margin-right: 20px;
+    padding-left: 100px;
+  }
+
+  #nav-bar-wish {
+    padding-left: 125px;
+  }
+
+  #profile-photo {
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+
+  #nav-bar-home {
+    font-family: myFontTitle;
+    padding-left: 10px;
+  }
+
+  #nav-bar-home img {
+    width: 73px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 50px;
+  }
+
+  #nav-bar-home:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-wish:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-favorites:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-logout:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #nav-bar-logout {
+    font-family: myFontTitle;
+    padding-left: 20px;
+  }
+
+  /* ===================================== Homepage */
+
+  .container {
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -110px;
+  }
+
+  .box {
+    width: 90%;
+    height: 60%;
+    background-image: url("/static/images/full-genie-with-tail.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box:hover {
+    transform: rotateY(180deg);
+  }
+
+  .homepage-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: rotateY(0deg);
+    margin-top: 780px;
+    margin-left: 4px;
+  }
+
+  .homepage-buttons button {
+    font-size: 2rem;
+    padding: 20px 30px;
+  }
+
+  #login-button-on-splash {
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #signup-button-on-splash {
+    background-color: rgb(200, 160, 81);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #login-button-on-splash:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #signup-button-on-splash:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* =================================== Signup Page */
+
+  .signup-form {
+    margin-top: 270px;
+    padding: 150px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  #signup-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #signup-button:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  /* Container + box for Carpet */
+  .container5 {
+    align-items: center;
+    position: absolute;
+    perspective: 1000px;
+    height: 80vh;
+    display: flex;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+    margin-bottom: 600px;
+    margin-left: 27%;
+    margin-top: -10px;
+  }
+
+  .box5 {
+    width: 90%;
+    height: 60%;
+    background-image: url("/static/images/smaller_carpet.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-bottom: 700px;
+    pointer-events: none;
+  }
+
+  .box5:hover {
+    transform: rotateY(180deg);
+  }
+
+  /* ==================================== Login Page */
+
+  .login-form {
+    text-align: center;
+    padding: 100px;
+    margin-top: 100px;
+  }
+
+  #login-button-page {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #login-button-page:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  #forgot-button-page {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  #forgot-button-page:hover {
+    animation: flash 1s infinite;
+  }
+
+  .container2 {
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box2 {
+    width: 90%;
+    height: 60%;
+    background-image: url("/static/images/genie_head.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-bottom: 400px;
+  }
+
+  .box2:hover {
+    transform: rotateY(180deg);
+  }
+
+  .login-form {
+    padding-top: 640px;
+  }
+
+  /* ==================================== Wish Page */
+
+  .video-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 125px;
+    margin-right: 50px;
+  }
+
+  .video-container {
+    z-index: 2;
+    position: relative;
+  }
+
+  #favorite-button-container {
+    display: flex;
+    align-items: center;
+  }
+
+  #video-favorite-display {
+    margin-left: 460px;
+  }
+
+  #favorite-button {
+    text-align: center;
+    border: none;
+    background: none;
+    z-index: 2;
+  }
+
+  #lamp-video-display {
+    background: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+  }
+
+  #lamp-video-display img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    width: 120vw; /* Increased width */
+    max-width: 1000px; /* Increased max width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box3 {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box3:hover {
+    transform: rotateX(180deg);
+  }
+
+  #blocked-user-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .user-blocked-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .blocked-user-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .blocked-user-details {
+    margin-top: 10px;
+  }
+
+  .blocked-user-details p {
+    margin: 0;
+    font-size: 12px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    margin-top: 825px;
+  }
+  /* ==================================== Favorites Page */
+
+  #unfavorite-button {
+    background-color: none;
+    color: red;
+    border: none;
+  }
+
+  .video-favorites-container {
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 40%;
+    margin-top: 30px;
+  }
+
+  #user-favorite-vid {
+    padding: 10px;
+  }
+
+  /* ==================================== Edit Page */
+
+  .edit-profile-form {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .profile-image-on-edit-page {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .profile-image-on-edit-page img {
+    width: 20%;
+    height: auto;
+  }
+
+  #edit-user-button:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #cancel-user-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Forgot Password */
+
+  .flash-password {
+    text-align: center;
+    color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-top: 60px;
+  }
+
+  .forgot-password-form {
+    margin-top: 100px;
+    text-align: center;
+    padding: 100px;
+  }
+
+  #forgot-password-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #forgot-password-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Genie Page */
+
+  #genie-background {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #genie-img-graphic img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #video-webcam-container {
+    position: relative;
+    width: 0%;
+    height: 0vh;
+    opacity: 0;
+  }
+
+  #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    filter: brightness(50%) contrast(200%) saturate(0) hue-rotate(180deg);
+  }
+
+  .container4 {
+    position: fixed;
+    top: 0;
+    left: 46%;
+    transform: translateX(-50%);
+    perspective: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 700px;
+  }
+
+  .box4 {
+    width: 90%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box4:hover {
+    transform: rotateX(180deg);
+  }
+
+  .genie-exit-button {
+    position: fixed;
+    top: 250px;
+    right: 450px;
+    z-index: 5;
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 5%;
+    height: 5%;
+    font-size: 2vw;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .genie-exit-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== FX */
+
+  @keyframes flash {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+}
+
+/* ================================= END OF 5K LARGER SCREENS */
+/* ================================= END OF 5K LARGER SCREENS */
+/* ================================= END OF 5K LARGER SCREENS */
+/* ================================= END OF 5K LARGER SCREENS */
+/* ================================= END OF 5K LARGER SCREENS */
+/* ================================= END OF 5K LARGER SCREENS */
+/* ================================= END OF 5K LARGER SCREENS */
+/* ================================= END OF 5K LARGER SCREENS */
+/* ================================= END OF 5K LARGER SCREENS */
+/* ================================= END OF 5K LARGER SCREENS */
+
+/* ====================================== General (5k lg monitor -- large monitors - squeezed down) */
+@media only screen and (max-width: 1500px) and (min-height: 1328px) {
+  body {
+    background-color: #e5e5e5;
+    font-family: myFontStandard;
+    overflow-y: hidden;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    background-color: #e5e5e5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  footer img {
+    object-fit: cover;
+    height: 100%;
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  .nav-space {
+    padding-bottom: 80px;
+  }
+
+  .footer-space {
+    padding-top: 80px;
+  }
+
+  #nav-bar {
+    z-index: 5;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0;
+    background-color: rgb(55, 132, 55);
+  }
+
+  #profile-photo {
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 40px;
+  }
+
+  .activate-genie-button {
+    background-color: red;
+    color: white;
+    animation: flash 2s infinite;
+    transition: box-shadow 0.3s;
+  }
+
+  .activate-genie-button:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(222, 80, 80);
+    color: white;
+    animation: flash 50ms infinite;
+  }
+
+  .navbar-nav button {
+    margin-right: 20px;
+    padding-left: 100px;
+  }
+
+  #nav-bar-wish {
+    padding-left: 125px;
+  }
+
+  #profile-photo {
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+
+  #nav-bar-home {
+    font-family: myFontTitle;
+    padding-left: 10px;
+  }
+
+  #nav-bar-home img {
+    width: 73px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 50px;
+  }
+
+  #nav-bar-home:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-wish:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-favorites:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-logout:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #nav-bar-logout {
+    font-family: myFontTitle;
+    padding-left: 20px;
+  }
+
+  /* ===================================== Homepage */
+
+  .container {
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -110px;
+  }
+
+  .box {
+    width: 90%;
+    height: 60%;
+    background-image: url("/static/images/full-genie-with-tail.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box:hover {
+    transform: rotateY(180deg);
+  }
+
+  .homepage-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: rotateY(0deg);
+    margin-top: 780px;
+    margin-left: 4px;
+  }
+
+  .homepage-buttons button {
+    font-size: 2rem;
+    padding: 20px 30px;
+  }
+
+  #login-button-on-splash {
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #signup-button-on-splash {
+    background-color: rgb(200, 160, 81);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #login-button-on-splash:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #signup-button-on-splash:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* =================================== Signup Page */
+
+  .signup-form {
+    margin-top: 270px;
+    padding: 150px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  #signup-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #signup-button:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  /* Container + box for Carpet */
+  .container5 {
+    align-items: center;
+    position: absolute;
+    perspective: 1000px;
+    height: 80vh;
+    display: flex;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+    margin-bottom: 600px;
+    margin-left: 27%;
+    margin-top: -10px;
+  }
+
+  .box5 {
+    width: 90%;
+    height: 60%;
+    background-image: url("/static/images/smaller_carpet.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-bottom: 700px;
+    pointer-events: none;
+  }
+
+  .box5:hover {
+    transform: rotateY(180deg);
+  }
+
+  /* ==================================== Login Page */
+
+  .login-form {
+    text-align: center;
+    padding: 100px;
+    margin-top: 100px;
+  }
+
+  #login-button-page {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #login-button-page:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  #forgot-button-page {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  #forgot-button-page:hover {
+    animation: flash 1s infinite;
+  }
+
+  .container2 {
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box2 {
+    width: 90%;
+    height: 60%;
+    background-image: url("/static/images/genie_head.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-bottom: 400px;
+  }
+
+  .box2:hover {
+    transform: rotateY(180deg);
+  }
+
+  .login-form {
+    padding-top: 640px;
+  }
+
+  /* ==================================== Wish Page */
+
+  .video-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 125px;
+    margin-right: 50px;
+  }
+
+  .video-container {
+    z-index: 2;
+    position: relative;
+  }
+
+  #favorite-button-container {
+    display: flex;
+    align-items: center;
+  }
+
+  #video-favorite-display {
+    margin-left: 460px;
+  }
+
+  #favorite-button {
+    text-align: center;
+    border: none;
+    background: none;
+    z-index: 2;
+  }
+
+  #lamp-video-display {
+    background: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+  }
+
+  #lamp-video-display img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    width: 120vw; /* Increased width */
+    max-width: 1000px; /* Increased max width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box3 {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box3:hover {
+    transform: rotateX(180deg);
+  }
+
+  #blocked-user-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .user-blocked-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .blocked-user-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .blocked-user-details {
+    margin-top: 10px;
+  }
+
+  .blocked-user-details p {
+    margin: 0;
+    font-size: 12px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    margin-top: 825px;
+  }
+  /* ==================================== Favorites Page */
+
+  #unfavorite-button {
+    background-color: none;
+    color: red;
+    border: none;
+  }
+
+  .video-favorites-container {
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 40%;
+    margin-top: 30px;
+  }
+
+  #user-favorite-vid {
+    padding: 10px;
+  }
+
+  /* ==================================== Edit Page */
+
+  .edit-profile-form {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .profile-image-on-edit-page {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .profile-image-on-edit-page img {
+    width: 20%;
+    height: auto;
+  }
+
+  #edit-user-button:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #cancel-user-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Forgot Password */
+
+  .flash-password {
+    text-align: center;
+    color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-top: 60px;
+  }
+
+  .forgot-password-form {
+    margin-top: 100px;
+    text-align: center;
+    padding: 100px;
+  }
+
+  #forgot-password-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #forgot-password-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Genie Page */
+
+  #genie-background {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #genie-img-graphic img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #video-webcam-container {
+    position: relative;
+    width: 0%;
+    height: 0vh;
+    opacity: 0;
+  }
+
+  #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    filter: brightness(50%) contrast(200%) saturate(0) hue-rotate(180deg);
+  }
+
+  .container4 {
+    position: fixed;
+    top: 0;
+    left: 46%;
+    transform: translateX(-50%);
+    perspective: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 700px;
+  }
+
+  .box4 {
+    width: 90%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box4:hover {
+    transform: rotateX(180deg);
+  }
+
+  .genie-exit-button {
+    position: fixed;
+    top: 250px;
+    right: 450px;
+    z-index: 5;
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 5%;
+    height: 5%;
+    font-size: 2vw;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .genie-exit-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== FX */
+
+  @keyframes flash {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+}
+
+/* ================================= END OF 5K LARGER SCREENS (squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (squeezed down) */
+
+
+
+
+
+/* ====================================== General (5k lg monitor -- large monitors - most squeezed down) */
+@media only screen and (max-width: 768px) and (min-height: 755px) {
+  body {
+    background-color: #e5e5e5;
+    font-family: myFontStandard;
+    overflow-y: hidden;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    background-color: #e5e5e5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  footer img {
+    object-fit: cover;
+    height: 100%;
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  .nav-space {
+    padding-bottom: 80px;
+  }
+
+  .footer-space {
+    padding-top: 80px;
+  }
+
+  #nav-bar {
+    z-index: 5;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0;
+    background-color: rgb(55, 132, 55);
+  }
+
+  #profile-photo {
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 40px;
+  }
+
+  .activate-genie-button {
+    background-color: red;
+    color: white;
+    animation: flash 2s infinite;
+    transition: box-shadow 0.3s;
+  }
+
+  .activate-genie-button:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(222, 80, 80);
+    color: white;
+    animation: flash 50ms infinite;
+  }
+
+  .navbar-nav button {
+    margin-right: 20px;
+    padding-left: 100px;
+  }
+
+  #nav-bar-wish {
+    padding-left: 125px;
+  }
+
+  #nav-bar-locked{
+    margin-top: 10px;
+    margin-left:100px;
+  }
+
+  #profile-photo {
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+
+  #nav-bar-home {
+    font-family: myFontTitle;
+    padding-left: 10px;
+  }
+
+  #nav-bar-home img {
+    width: 73px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 50px;
+  }
+
+  #nav-bar-home:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-wish:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-favorites:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-logout:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #nav-bar-logout {
+    font-family: myFontTitle;
+    padding-left: 20px;
+    margin-left: 350px;
+    margin-top:-65px;
+  }
+
+  /* ===================================== Homepage */
+
+  .container {
+    perspective: 1000px;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -140px;
+  }
+
+  .box {
+    width: 100%;
+    height: 80vh;
+    background-image: url("/static/images/full-genie-with-tail.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box:hover {
+    transform: rotateY(180deg);
+  }
+
+  .homepage-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: rotateY(0deg);
+    margin-top: 770px;
+    margin-left: 4px;
+  }
+
+  .homepage-buttons button {
+    font-size: 2rem;
+    padding: 12px 15px;
+  }
+
+  #login-button-on-splash {
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #signup-button-on-splash {
+    background-color: rgb(200, 160, 81);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #login-button-on-splash:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #signup-button-on-splash:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* =================================== Signup Page */
+
+  .signup-form {
+    margin-top: 270px;
+    padding: 150px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  #signup-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #signup-button:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  /* Container + box for Carpet */
+  .container5 {
+    align-items: center;
+    position: absolute;
+    perspective: 1000px;
+    height: 80vh;
+    display: flex;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+    margin-bottom: 600px;
+    margin-left: 27%;
+    margin-top: -10px;
+  }
+
+  .box5 {
+    width: 90%;
+    height: 60%;
+    background-image: url("/static/images/smaller_carpet.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-bottom: 700px;
+    pointer-events: none;
+  }
+
+  .box5:hover {
+    transform: rotateY(180deg);
+  }
+
+  /* ==================================== Login Page */
+
+  .login-form {
+    text-align: center;
+    padding: 100px;
+    margin-top: 100px;
+  }
+
+  #login-button-page {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #login-button-page:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  #forgot-button-page {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  #forgot-button-page:hover {
+    animation: flash 1s infinite;
+  }
+
+  .container2 {
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box2 {
+    width: 90%;
+    height: 60%;
+    background-image: url("/static/images/genie_head.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-bottom: 400px;
+  }
+
+  .box2:hover {
+    transform: rotateY(180deg);
+  }
+
+  .login-form {
+    padding-top: 640px;
+  }
+
+  /* ==================================== Wish Page */
+
+  .video-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 125px;
+    margin-right: 50px;
+  }
+
+  .video-container {
+    z-index: 2;
+    position: relative;
+  }
+
+  #favorite-button-container {
+    display: flex;
+    align-items: center;
+  }
+
+  #video-favorite-display {
+    margin-left: 460px;
+  }
+
+  #favorite-button {
+    text-align: center;
+    border: none;
+    background: none;
+    z-index: 2;
+  }
+
+  #lamp-video-display {
+    background: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+  }
+
+  #lamp-video-display img {
+    width: 90%;
+    height: auto;
+  }
+
+  .container3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    width: 120vw; /* Increased width */
+    max-width: 1000px; /* Increased max width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .box3 {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box3:hover {
+    transform: rotateX(180deg);
+  }
+
+  #blocked-user-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .user-blocked-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .blocked-user-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .blocked-user-details {
+    margin-top: 10px;
+  }
+
+  .blocked-user-details p {
+    margin: 0;
+    font-size: 12px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    margin-top: 825px;
+  }
+  /* ==================================== Favorites Page */
+
+  #unfavorite-button {
+    background-color: none;
+    color: red;
+    border: none;
+  }
+
+  .video-favorites-container {
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 16%;
+    margin-top: 30px;
+  }
+
+  #user-favorite-vid {
+    padding: 10px;
+  }
+
+  /* ==================================== Edit Page */
+
+  .edit-profile-form {
+    text-align: center;
+    margin-top: 30px;
+    padding: 80px;
+  }
+
+  .profile-image-on-edit-page {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .profile-image-on-edit-page img {
+    width: 30%;
+    height: auto;
+  }
+
+  #edit-user-button:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #cancel-user-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Forgot Password */
+
+  .flash-password {
+    text-align: center;
+    color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-top: 60px;
+  }
+
+  .forgot-password-form {
+    margin-top: 100px;
+    text-align: center;
+    padding: 100px;
+  }
+
+  #forgot-password-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #forgot-password-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Genie Page */
+
+  #genie-background {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #genie-img-graphic img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #video-webcam-container {
+    position: relative;
+    width: 0%;
+    height: 0vh;
+    opacity: 0;
+  }
+
+  #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    filter: brightness(50%) contrast(200%) saturate(0) hue-rotate(180deg);
+  }
+
+  .container4 {
+    position: fixed;
+    top: 0;
+    left: 40%;
+    transform: translateX(-50%);
+    perspective: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 700px;
+  }
+
+  .box4 {
+    width: 90%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box4:hover {
+    transform: rotateX(180deg);
+  }
+
+  .genie-exit-button {
+    position: fixed;
+    top: 380px;
+    right: 80px;
+    z-index: 5;
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 10%;
+    height: 10%;
+    font-size: 4vw;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .genie-exit-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== FX */
+
+  @keyframes flash {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+}
+
+/* ================================= END OF 5K LARGER SCREENS (most squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (most squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (most squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (most squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (most squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (most squeezed down) */
+/* ================================= END OF 5K LARGER SCREENS (most squeezed down) */
+
+
+/* Tablets and smaller screen sizes  */
+/* ====================================== Tablets & small screens */
+@media only screen and (max-width: 768px) and (max-height: 754px) {
+  body {
+    background-color: #e5e5e5;
+    font-family: myFontStandard;
+    overflow-y: hidden;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    background-color: #e5e5e5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  footer img {
+    object-fit: cover;
+    height: 100%;
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  .nav-space {
+    padding-bottom: 80px;
+  }
+
+  .footer-space {
+    padding-top: 80px;
+  }
+
+  #nav-bar {
+    z-index: 5;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0;
+    background-color: rgb(55, 132, 55);
+  }
+
+  #profile-photo {
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 40px;
+  }
+
+  .activate-genie-button {
+    background-color: red;
+    color: white;
+    animation: flash 2s infinite;
+    transition: box-shadow 0.3s;
+  }
+
+  .activate-genie-button:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(222, 80, 80);
+    color: white;
+    animation: flash 50ms infinite;
+  }
+
+  .navbar-nav button {
+    margin-right: 20px;
+    padding-left: 100px;
+  }
+
+  #nav-bar-wish {
+    padding-left: 125px;
+  }
+
+  #nav-bar-locked {
+    margin-top: 10px;
+    margin-left: 100px;
+  }
+
+  #profile-photo {
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+
+  #nav-bar-home {
+    font-family: myFontTitle;
+    padding-left: 10px;
+  }
+
+  #nav-bar-home img {
+    width: 73px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 50px;
+  }
+
+  #nav-bar-home:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-wish:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-favorites:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-logout:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #nav-bar-logout {
+    font-family: myFontTitle;
+    padding-left: 20px;
+    margin-left: 350px;
+    margin-top: -65px;
+  }
+
+  /* ===================================== Homepage */
+
+  .container {
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box {
+    width: 80%;
+    height: 60%;
+    background-image: url("/static/images/full-genie-with-tail.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-top: -100px;
+  }
+
+  .box:hover {
+    transform: rotateY(180deg);
+  }
+
+  .homepage-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: rotateY(0deg);
+    margin-left: 4px;
+    margin-top: 420px;
+  }
+
+  .homepage-buttons button {
+    font-size: 2rem;
+    padding: 6px 10px;
+  }
+
+  #login-button-on-splash {
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #signup-button-on-splash {
+    background-color: rgb(200, 160, 81);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #login-button-on-splash:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #signup-button-on-splash:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* =================================== Signup Page */
+
+  .signup-form {
+    margin-top: 100px;
+    padding: 150px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  #signup-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #signup-button:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  /* Container + box for Carpet */
+  .container5 {
+    align-items: center;
+    position: absolute;
+    perspective: 1000px;
+    height: 80vh;
+    display: flex;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+    margin-bottom: 400px;
+    margin-left: 30%;
+    margin-top: 70px;
+  }
+
+  .box5 {
+    width: 80%;
+    height: 50%;
+    background-image: url("/static/images/smaller_carpet.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-bottom: 500px;
+    pointer-events: none;
+  }
+
+  .box5:hover {
+    transform: rotateY(180deg);
+  }
+
+  /* ==================================== Login Page */
+
+  .login-form {
+    text-align: center;
+    padding: 80px;
+    margin-top: -300px;
+  }
+
+  #login-button-page {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #login-button-page:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  #forgot-button-page {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  #forgot-button-page:hover {
+    animation: flash 1s infinite;
+  }
+
+  .container2 {
+    perspective: 1000px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box2 {
+    width: 80%;
+    height: 60%;
+    background-image: url("/static/images/genie_head.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-top: -200px;
+  }
+
+  .box2:hover {
+    transform: rotateY(180deg);
+  }
+
+  .login-form {
+    padding-top: 640px;
+  }
+
+  /* ==================================== Wish Page */
+
+  .video-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 125px;
+    margin-right: 50px;
+  }
+
+  .video-container {
+    z-index: 2;
+    position: relative;
+  }
+
+  #favorite-button-container {
+    display: flex;
+    align-items: center;
+  }
+
+  #video-favorite-display {
+    margin-left: 460px;
+  }
+
+  #favorite-button {
+    text-align: center;
+    border: none;
+    background: none;
+    z-index: 2;
+  }
+
+  #lamp-video-display {
+    background: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+  }
+
+  #lamp-video-display img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    width: 100vw; /* Increased width */
+    max-width: 900px; /* Increased max width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -60px;
+  }
+
+  .box3 {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box3:hover {
+    transform: rotateX(180deg);
+  }
+
+  #blocked-user-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .user-blocked-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .blocked-user-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .blocked-user-details {
+    margin-top: 10px;
+  }
+
+  .blocked-user-details p {
+    margin: 0;
+    font-size: 12px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    margin-top: 320px;
+  }
+  /* ==================================== Favorites Page */
+
+  #unfavorite-button {
+    background-color: none;
+    color: red;
+    border: none;
+  }
+
+  .video-favorites-container {
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 13%;
+    margin-top: 30px;
+  }
+
+  #user-favorite-vid {
+    padding: 10px;
+  }
+
+  /* ==================================== Edit Page */
+
+  .edit-profile-form {
+    text-align: center;
+    margin-top: -80px;
+    padding: 100px;
+  }
+
+  .profile-image-on-edit-page {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .profile-image-on-edit-page img {
+    width: 20%;
+    height: auto;
+  }
+
+  #edit-user-button:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #cancel-user-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Forgot Password */
+
+  .flash-password {
+    text-align: center;
+    color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-top: 60px;
+  }
+
+  .forgot-password-form {
+    margin-top: 100px;
+    text-align: center;
+    padding: 100px;
+  }
+
+  #forgot-password-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #forgot-password-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Genie Page */
+
+  #genie-background {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #genie-img-graphic img {
+    width: 50%;
+    height: 50%;
+    margin-right: 20px;
+  }
+
+  #video-webcam-container {
+    position: relative;
+    width: 0%;
+    height: 0vh;
+    opacity: 0;
+  }
+
+  #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    filter: brightness(50%) contrast(200%) saturate(0) hue-rotate(180deg);
+  }
+
+  .container4 {
+    position: fixed;
+    top: 0;
+    left: 38%;
+    transform: translateX(-50%);
+    perspective: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 700px;
+  }
+
+  .box4 {
+    width: 90%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-right: 5px;
+  }
+
+  .box4:hover {
+    transform: rotateX(180deg);
+  }
+
+  .genie-exit-button {
+    position: fixed;
+    top: 110px;
+    right: 100px;
+    z-index: 5;
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 10%;
+    height: 10%;
+    font-size: 4vw;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .genie-exit-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== FX */
+
+  @keyframes flash {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+}
+
+
+
+/* Cellphone - smallest screen size  */
+/* ====================================== Cellphone */
+@media only screen and (max-width: 450px) and (max-height: 950px) {
+  body {
+    background-color: #e5e5e5;
+    font-family: myFontStandard;
+    overflow-y: hidden;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    background-color: #e5e5e5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  footer img {
+    object-fit: cover;
+    height: 100%;
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  .nav-space {
+    padding-bottom: 80px;
+  }
+
+  .footer-space {
+    padding-top: 80px;
+  }
+
+  #nav-bar {
+    z-index: 5;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0;
+    background-color: rgb(55, 132, 55);
+  }
+
+  #profile-photo {
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 40px;
+  }
+
+  .activate-genie-button {
+    background-color: red;
+    color: white;
+    animation: flash 2s infinite;
+    transition: box-shadow 0.3s;
+  }
+
+  .activate-genie-button:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(222, 80, 80);
+    color: white;
+    animation: flash 50ms infinite;
+  }
+
+  .navbar-nav button {
+    margin-right: 20px;
+    padding-left: 100px;
+  }
+
+  #nav-bar-wish {
+    padding-left: 125px;
+  }
+
+  #nav-bar-locked {
+    margin-top: -65px;
+    margin-left: 200px;
+  }
+
+  #profile-photo {
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+
+  #nav-bar-favorites{
+    margin-left:0px;
+    margin-top:10px;
+  }
+
+  #nav-bar-home {
+    font-family: myFontTitle;
+    padding-left: 10px;
+  }
+
+  #nav-bar-home img {
+    width: 73px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 50px;
+  }
+
+  #nav-bar-home:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-wish:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-favorites:hover {
+    animation: flash 1s infinite;
+  }
+
+  #nav-bar-logout:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #nav-bar-logout {
+    font-family: myFontTitle;
+    padding-left: 20px;
+    margin-left: 150px;
+    margin-top: -10px;
+  }
+
+  /* ===================================== Homepage */
+
+  .container {
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box {
+    width: 90%;
+    height: 60%;
+    background-image: url("/static/images/full-genie-with-tail.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-top: 100px;
+  }
+
+  .box:hover {
+    transform: rotateY(180deg);
+  }
+
+  .homepage-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: rotateY(0deg);
+    margin-left: 4px;
+    margin-top: 420px;
+  }
+
+  .homepage-buttons button {
+    font-size: 2rem;
+    padding: 6px 10px;
+  }
+
+  #login-button-on-splash {
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #signup-button-on-splash {
+    background-color: rgb(200, 160, 81);
+    color: white;
+    border-radius: 8px;
+    border: none;
+  }
+
+  #login-button-on-splash:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #signup-button-on-splash:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* =================================== Signup Page */
+
+  .signup-form {
+    margin-top: 100px;
+    padding: 80px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  #signup-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #signup-button:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  /* Container + box for Carpet */
+  .container5 {
+    align-items: center;
+    position: absolute;
+    perspective: 1000px;
+    height: 80vh;
+    display: flex;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+    margin-bottom: 400px;
+    margin-left: 30%;
+    margin-top: 70px;
+  }
+
+  .box5 {
+    width: 80%;
+    height: 50%;
+    background-image: url("/static/images/smaller_carpet.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-bottom: 500px;
+    pointer-events: none;
+  }
+
+  .box5:hover {
+    transform: rotateY(180deg);
+  }
+
+  /* ==================================== Login Page */
+
+  .login-form {
+    text-align: center;
+    padding: 80px;
+    margin-top: -275px;
+  }
+
+  #login-button-page {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #login-button-page:hover {
+    animation: flash 50ms infinite;
+    cursor: pointer;
+  }
+
+  #forgot-button-page {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  #forgot-button-page:hover {
+    animation: flash 1s infinite;
+  }
+
+  .container2 {
+    perspective: 1000px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box2 {
+    width: 80%;
+    height: 60%;
+    background-image: url("/static/images/genie_head.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-top: 200px;
+  }
+
+  .box2:hover {
+    transform: rotateY(180deg);
+  }
+
+  .login-form {
+    padding-top: 640px;
+  }
+
+  /* ==================================== Wish Page */
+
+  .video-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 125px;
+    margin-right: 50px;
+  }
+
+  .video-container {
+    z-index: 2;
+    position: relative;
+  }
+
+  #favorite-button-container {
+    display: flex;
+    align-items: center;
+  }
+
+  #video-favorite-display {
+    margin-left: 460px;
+  }
+
+  #favorite-button {
+    text-align: center;
+    border: none;
+    background: none;
+    z-index: 2;
+  }
+
+  #lamp-video-display {
+    background: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+  }
+
+  #lamp-video-display img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    width: 100vw; /* Increased width */
+    max-width: 900px; /* Increased max width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  .box3 {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .box3:hover {
+    transform: rotateX(180deg);
+  }
+
+  #blocked-user-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .user-blocked-container {
+    text-align: center;
+    margin-bottom: 20px;
+    padding:6px;
+  }
+
+  .blocked-user-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .blocked-user-details {
+    margin-top: 5px;
+  }
+
+  .blocked-user-details p {
+    margin: 0;
+    font-size: 10px;
+    object-fit: cover;
+  }
+
+  .top-blocked-container {
+    margin-top: 420px;
+  }
+  /* ==================================== Favorites Page */
+
+  #unfavorite-button {
+    background-color: none;
+    color: red;
+    border: none;
+  }
+
+  .video-favorites-container {
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 9%;
+    margin-top: 30px;
+  }
+
+  #user-favorite-vid {
+    padding: 20px;
+    width:90%;
+    height:auto;
+  }
+
+  /* ==================================== Edit Page */
+
+  .edit-profile-form {
+    text-align: center;
+    margin-top: -60px;
+    padding: 74px;
+  }
+
+  .profile-image-on-edit-page {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .profile-image-on-edit-page img {
+    width: 40%;
+    height: auto;
+  }
+
+  #edit-user-button:hover {
+    animation: flash 50ms infinite;
+  }
+
+  #cancel-user-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Forgot Password */
+
+  .flash-password {
+    text-align: center;
+    color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-top: 60px;
+  }
+
+  .forgot-password-form {
+    margin-top: 100px;
+    text-align: center;
+    padding: 100px;
+  }
+
+  #forgot-password-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #forgot-password-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== Genie Page */
+
+  #genie-background {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #genie-img-graphic img {
+    width: 50%;
+    height: 50%;
+    margin-right: 20px;
+  }
+
+  #video-webcam-container {
+    position: relative;
+    width: 0%;
+    height: 0vh;
+    opacity: 0;
+  }
+
+  #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    filter: brightness(50%) contrast(200%) saturate(0) hue-rotate(180deg);
+  }
+
+  .container4 {
+    position: fixed;
+    top: 0;
+    left: 30%;
+    transform: translateX(-50%);
+    perspective: 1000px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 700px;
+  }
+
+  .box4 {
+    width: 90%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    margin-right: 5px;
+  }
+
+  .box4:hover {
+    transform: rotateX(180deg);
+  }
+
+  .genie-exit-button {
+    position: fixed;
+    top: 245px;
+    right: 30px;
+    z-index: 5;
+    background-color: rgb(68, 80, 193);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 14%;
+    height: 10%;
+    font-size: 4vw;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .genie-exit-button:hover {
+    animation: flash 1s infinite;
+  }
+
+  /* ==================================== FX */
+
+  @keyframes flash {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
   }
 }

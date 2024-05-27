@@ -61,7 +61,7 @@ function moveCarpet(evt) {
 
 
 /**
- * Event for moving Login page Genie Head image--> follows mouse.
+ * Event for moving final genie--> follows mouse.
  */
 function moveFinalGenie(evt) {
   const x = evt.clientX / window.innerWidth - 0.5;
@@ -76,10 +76,8 @@ function moveFinalGenie(evt) {
 
 
 
-
-
 /**
- * Event for moving Login page Genie Head image--> follows mouse.
+ * Event for moving lamp page on wish page--> follows mouse.
  */
 function moveLamp(evt) {
   const x = evt.clientX / window.innerWidth - 0.5;
@@ -91,9 +89,6 @@ function moveLamp(evt) {
   $box3.css('transform', `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`);
 
 };
-
-
-
 
 
 /////////////////////////////////////////////////////////////////////////SOUNDS

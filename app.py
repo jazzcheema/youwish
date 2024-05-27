@@ -51,6 +51,7 @@ VIDEO_LIMIT = 3
 
 ##############################################################################
 
+
 @app.before_request
 def add_user_to_g():
     """If we're logged in, add curr user to Flask global."""
@@ -60,6 +61,7 @@ def add_user_to_g():
 
     else:
         g.user = None
+
 
 @app.before_request
 def add_csrf_to_g():
@@ -79,8 +81,9 @@ def do_logout():
     if CURR_USER_KEY in session:
         del session[CURR_USER_KEY]
 
-##################################Main Routes
+# Main Routes
 ##############################################################################
+
 
 @app.get('/')
 def display_homepage():
@@ -135,6 +138,7 @@ def signup():
 
     return render_template('signup.html', form=form)
 
+
 @app.route('/login', methods=["GET", "POST"])
 def login():
     """Handle user login and redirect to homepage on success."""
@@ -178,8 +182,9 @@ def logout():
         flash(f"You don't have access")
         raise Unauthorized()
 
-##################################Favorite/Unfavorite Video & Show Savorites
+# Favorite/Unfavorite Video & Show Savorites
 ##############################################################################
+
 
 @app.post('/favorite_video/<video_id>/')
 def favorite_and_unfavorite_video(video_id):
@@ -192,7 +197,7 @@ def favorite_and_unfavorite_video(video_id):
     # if  g.csrf_form.validate_on_submit():
     if request.method == 'POST':
         unfavorite = Favorite.query.filter_by(user_id=g.user.id,
-                                                  video_id=video_id).first()
+                                              video_id=video_id).first()
 
         if unfavorite:
             db.session.delete(unfavorite)
@@ -208,7 +213,6 @@ def favorite_and_unfavorite_video(video_id):
                 'data': 'Success! Video Favorited',
             }
             return (jsonify(favorited), 201)
-
 
     flash("Access unauthorized", "danger")
     return redirect("/")
@@ -232,8 +236,9 @@ def show_user_favorites(user_id):
     user = User.query.get_or_404(user_id)
     return render_template('favorites.html', user=user)
 
-##################################Edit User Profile
+# Edit User Profile
 ################################################################################
+
 
 @app.route('/edit', methods=["GET", "POST"])
 def edit_user_profile():
@@ -268,12 +273,10 @@ def edit_user_profile():
         else:
             flash('Wrong password')
 
-
     return render_template('edit-user.html', form=form)
 
 
-
-##################################Youtube API / Wish Page
+# Youtube API / Wish Page
 ##############################################################################
 
 @app.route('/wish', methods=['GET', 'POST'])
@@ -300,7 +303,7 @@ def youtube_search():
         flash("You're blocked until midnight...")
         return redirect('/')
 
-    if  request.method == 'POST':
+    if request.method == 'POST':
 
         if 'video_limit' not in session:
             session['video_limit'] = 0
@@ -320,11 +323,11 @@ def youtube_search():
         order = 'date'
         view_count_min = 200
         view_count_max = 1200
-        video_cat_ids = [1,2,10,15,17,18,19,20,21,22,23,24,25,26,27,28,29,30,
-                        31,32,33,34,35,36,37,38,39,40,41,42,43,44]
+        video_cat_ids = [1, 2, 10, 15, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+                         31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
         random_video_cat_id = choice(video_cat_ids)
 
-        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_5)
+        youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_2)
 
         # Call Youtube API and retrieve videos with input from random word
         # and random category. Cannot pull video stats with this call,
@@ -340,7 +343,8 @@ def youtube_search():
             videoCategoryId=f"{random_video_cat_id}"
         ).execute()
 
-        video_ids = [item['id']['videoId'] for item in search_response['items']]
+        video_ids = [item['id']['videoId']
+                     for item in search_response['items']]
         videos = []
 
         # For every video retrieved, make another call to the YouTube API to
@@ -388,7 +392,7 @@ def youtube_search():
     return render_template('display.html', video=None, top_users=top_users)
 
 
-##################################Page for Genie to appear
+# Page for Genie to appear
 ################################################################################
 
 @app.get('/genie')
@@ -439,8 +443,7 @@ def show_genie():
     return render_template('genie-timer.html')
 
 
-
-##################################Forgot Password & New Password entry
+# Forgot Password & New Password entry
 ################################################################################
 
 @app.route('/forgot', methods=['GET', 'POST'])
@@ -485,7 +488,8 @@ def reset_password(token):
         user = User.query.filter_by(email=email).first()
 
         if user:
-            hashed_pwd = bcrypt.generate_password_hash(new_password).decode('UTF-8')
+            hashed_pwd = bcrypt.generate_password_hash(
+                new_password).decode('UTF-8')
             user.password = hashed_pwd
             db.session.commit()
             flash('Success!')
@@ -496,10 +500,7 @@ def reset_password(token):
     return render_template('reset.html', token=token, form=form)
 
 
-
-
-
-##################################Clear blocked users (for use w/ cron)
+# Clear blocked users (for use w/ cron)
 ################################################################################
 
 
@@ -532,13 +533,7 @@ def clear_blocked_users():
 
 def check_blocked_total():
     """Checks the blocked users total and stores top three users in a list."""
-    top_blocked_users = User.query.filter(User.blocked_total >= 1).order_by(User.blocked_total.desc()).limit(3).all()
+    top_blocked_users = User.query.filter(User.blocked_total >= 1).order_by(
+        User.blocked_total.desc()).limit(3).all()
 
     return top_blocked_users
-
-
-
-
-
-
-

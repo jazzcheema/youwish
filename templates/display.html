@@ -2,8 +2,9 @@
 
 {% block content %}
 <nav class="navbar navbar-expand-lg navbar-light" id="nav-bar">
-  <a class="navbar-brand" href="/edit"> <img src="{{g.user.image_url}}" alt="Navbar Icon" class="profile-photo-nav"
-      id="profile-photo">{{g.user.username}}</a>
+  <a class="navbar-brand" href="/edit">
+    <img src="{{ g.user.image_url }}" alt="Navbar Icon" class="profile-photo-nav" id="profile-photo">{{ g.user.username }}
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -11,12 +12,12 @@
   <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <form>
-        <button formaction="/" id="nav-bar-home" type="button" class="btn btn-secondary"><img
-            src="/static/images/magic-lamp.png" alt="home-icon">Home</button>
-        <button formaction="/wish" formmethod="GET" class="btn btn-light" id="nav-bar-wish">Wish
+        <button formaction="/" id="nav-bar-home" type="button" class="btn btn-secondary">
+          <img src="/static/images/magic-lamp.png" alt="home-icon">Home
         </button>
-        <button formaction="/favorite/{{g.user.id}}" id="nav-bar-favorites" class="btn btn-light">Favorites</button>
-        <button class="btn btn-light" disabled id="nav-bar-locked" formaction="/genie">Locked</a>
+        <button formaction="/wish" formmethod="GET" class="btn btn-light" id="nav-bar-wish">Wish</button>
+        <button formaction="/favorite/{{ g.user.id }}" id="nav-bar-favorites" class="btn btn-light">Favorites</button>
+        <button class="btn btn-light" disabled id="nav-bar-locked" formaction="/genie">Locked</button>
       </form>
     </div>
     <div class="navbar-nav">
@@ -28,23 +29,15 @@
   </div>
 </nav>
 <div class="nav-space"></div>
-<!-- wish page -->
-{% if get_flashed_messages() %}
-{% for message in get_flashed_messages() %}
-<h4 class="flash-password">{{ message }}</h4>
-{% endfor %}
-{% endif %}
 
-
-
+<!-- Content for the page -->
 <div class="video-content">
   <h2 class="page-title"></h2>
   <br>
   <form>
     <div class="video-container">
-
+      <!-- Video container content here -->
     </div>
-    <!-- {{ g.csrf_form.hidden_tag() }} -->
   </form>
   <form>
     <div class="container3">
@@ -59,9 +52,9 @@
 
 <div class="blocked-container">
   <div class="top-blocked-container">
-    {% for user in top_users%}
+    {% for user in top_users %}
     <div class="user-blocked-container">
-      <img id="blocked-user-image" src="{{user.image_url}}" alt="{{user.username}}">
+      <img id="blocked-user-image" src="{{ user.image_url }}" alt="{{ user.username }}">
       <div class="blocked-user-details">
         <p>Blocked Total: {{ user.blocked_total }}</p>
         <p>Username: {{ user.username }}</p>
@@ -76,17 +69,14 @@
   Your browser does not support the audio element.
 </audio>
 
-
 <audio id="genieReady" preload="auto">
   <source src="/static/sounds/genie_ready.mp3" type="audio/mp3">
   Your browser does not support the audio element.
 </audio>
 
-
 <audio id="homeButtonSnd" preload="auto">
   <source src="/static/sounds/locked_genie.wav" type="audio/mp3">
   Your browser does not support the audio element.
 </audio>
-
 
 {% endblock %}
