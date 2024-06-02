@@ -146,7 +146,7 @@ Follow the steps below to set this project up on your local machine. Note: this 
 *After third and final video request, the top 'locked' button now flashes and transforms to a button 'visit genie' that is clickable. If user does not click the button, they will be redirected in 15 seconds-- a sound also prompts the user here.*
 <br/>
 <br/>
-![Screenshot](./assets/final-genie.png)
+![Alt Text](./assets/final-genie.gif)
 *Final genie page that appears after you've been blocked from the app. User can click on the Genie face to activate local computer's webcam and display their own face. A button appears after a few seconds that takes the user to the initial landing page. Now they are blocked for 24 hours.*
 <br/>
 <br/>
