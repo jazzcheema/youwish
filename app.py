@@ -40,11 +40,7 @@ connect_db(app)
 
 YOUTUBE_API = os.environ['YOUTUBE_API']
 YOUTUBE_API_2 = os.environ['YOUTUBE_API_2']
-YOUTUBE_API_3 = os.environ['YOUTUBE_API_3']
-YOUTUBE_API_4 = os.environ['YOUTUBE_API_4']
-YOUTUBE_API_5 = os.environ['YOUTUBE_API_5']
-YOUTUBE_API_6 = os.environ['YOUTUBE_API_6']
-YOUTUBE_API_7 = os.environ['YOUTUBE_API_7']
+
 
 CURR_USER_KEY = "curr_user"
 VIDEO_LIMIT = 3
