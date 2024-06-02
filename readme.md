@@ -155,7 +155,7 @@ Follow the steps below to set this project up on your local machine. Note: this 
 <br/>
 <br/>
 ![Alt Text](./assets/final-genie.gif)
-*Final genie page that appears after you've been blocked from the app. User can click on the Genie face to activate local computer's webcam and display their own face. A button appears after a few seconds that takes the user to the initial landing page. Now they are blocked for 24 hours.*
+*Final genie page that appears after you've been blocked from the app. User can click on the Genie face to activate local computer's webcam and display their own face. A button appears after a few seconds that takes the user to the initial landing page. Now they are blocked until Midnight (PST).*
 <br/>
 <br/>
 ![Screenshot](./assets/edit.png)
