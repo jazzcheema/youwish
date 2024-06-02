@@ -126,7 +126,7 @@ Follow the steps below to set this project up on your local machine. Note: this 
 *Users can sign into the application, or click the Genie face for a hidden sound. The Genie's face also follows your mouse movement on this page. Note: all visual elements are reactive to mousemovement.*
 <br/>
 <br/>
-![Screenshot](./assets/signup.png)
+![Alt Text](./assets/signup.gif)
 *User signup page. Can select between three profile images from the dropdown: Cobra, Monkey, Falcon. These images represent the 'mythical' forms a genie can take. Carpet also follows mousemovement.*
 <br/>
 <br/>
