@@ -142,7 +142,7 @@ Follow the steps below to set this project up on your local machine. Note: this 
 *After clicking on a video, this is what is displayed. Here a user can favorite a video and add it to their favorites collection, and also displays the views of the randomly selected video.*
 <br/>
 <br/>
-![Screenshot](./assets/genie-call.png)
+![Alt Text](./assets/genie-call.gif)
 *After third and final video request, the top 'locked' button now flashes and transforms to a button 'visit genie' that is clickable. If user does not click the button, they will be redirected in 15 seconds-- a sound also prompts the user here.*
 <br/>
 <br/>
