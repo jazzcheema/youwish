@@ -66,7 +66,12 @@
 
 I have included a playlist of all the music & sounds found on the application below!
 
-<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1831611720&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/thecyberfoolz" title="Thecyberfoolz" target="_blank" style="color: #cccccc; text-decoration: none;"></a> · <a href="https://soundcloud.com/thecyberfoolz/sets/youwish" title="YouWish" target="_blank" style="color: #cccccc; text-decoration: none;">YouWish</a></div>
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1831611720&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+<div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+  <a href="https://soundcloud.com/thecyberfoolz" title="Thecyberfoolz" target="_blank" style="color: #cccccc; text-decoration: none;">Thecyberfoolz</a> · 
+  <a href="https://soundcloud.com/thecyberfoolz/sets/youwish" title="YouWish" target="_blank" style="color: #cccccc; text-decoration: none;">YouWish</a>
+</div>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
