@@ -69,7 +69,7 @@ I have included a playlist of all the music & sounds found on the application be
 [Listen to the playlist on SoundCloud](https://soundcloud.com/thecyberfoolz/sets/youwish)
 
 
-A statement from Kevin Netteberg on his experience on YouWish (designer/artist behind all images):
+A statement from [Kevin Netteberg](https://kevinnetteberg.artstation.com/) on his experience on YouWish (designer/artist behind all images):
 
 *This project for me mainly centered around 3D modeling for the bigger assets of the app. This was my first sculpt of an original concept after recently learning the software Blender, so it was a test run for both of us. All the designs started out as sketches on paper, then brought to a finish in their respective applications. For the logo I used Adobe illustrator, the profile icons in photoshop, and the genie, carpet, and lamp were sculpted and modeled in Blender. I relied mostly on the color palette to keep everything cohesive along with art style that reflected my memories of the early 2000s when the internet felt new and exciting.*
 
