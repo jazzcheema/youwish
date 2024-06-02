@@ -62,6 +62,8 @@
 
 *I wanted to block users at the database level to take authorization and security more seriously, rather than simple session based blocking-- where a user could simply restart the session and request more videos-- therefore, I block them at database and clear them at Midnight va Cron. My last serious implementation was a feature where the user clicks the Genie's face at the final page, and the browser prompts for permission to enable webcam-- here the user is able to view themselves, a sort of mirror of shame. I wanted to allow them to capture the image and save it as their profile image-- but i've moved onto other applications and ideas now!*
 
+*I created all of the sounds and music for the application. Landing page has music, as well as final Genie page. Almost all buttons have a unique sound, and the lamp when clicked signals a success or ominous sound depending on the event. The homepage music was influenced by a sort of Playsation 1 'Crash Bandicoot' vibe-- I wanted the application to be playful. The final page music when the Genie appears is a bit spooky and threatening-- I really like exploring the interplay between these two worlds.*
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
